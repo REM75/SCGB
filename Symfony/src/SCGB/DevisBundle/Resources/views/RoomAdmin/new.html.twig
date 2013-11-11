@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Mon devis en ligne{% endblock %}
+{% set language = 'fr' %}
+
+{% block body %}
+<div id="bottom" class="row-fluid ">
+		<div class="space_box white_box">
+			<h1 class="text_blue title text-left " > Mon devis</h1>
+			 
+			<div class="entity-form spacer">
+				<form method="post" {{ form_enctype(form) }}>
+					<div class="form-horizontal form-padding">
+						<legend>Votre {{ entity.name }}</legend>	
+						<span class="row-fluid">
+							<span class="span4">
+								<ul class="unstyled">
+									<li>
+										<span><i class="fa fa-arrows-alt"></i> Taile de la pièce : {{ entity.size}} m²</span>
+									</li>
+								</ul>
+								<ul class="unstyled">
+									<li>
+										<span><i class="fa fa-arrows-v"></i> Hauteur de la pièce :  {{ entity.width}} m</span>
+									</li>
+								</ul>
+							</span>
+							<span class="span4">								
+								{{ form_rest(form) }} 
+								{{ form_errors(form) }}
+							</span>
+						</span>
+						<input type="submit" class="btn btn-primary submit-padding" />
+					</div>
+			  </form>
+			</div>
+		</div>
+</div>
+
+{% endblock %}

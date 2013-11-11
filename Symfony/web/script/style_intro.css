@@ -1,0 +1,103 @@
+body{
+	margin: 0;
+	padding: 0;
+    font-family:Helvetica,Arial,sans-serif;
+    background-size: cover;  
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover;
+}
+#header {
+	width:100%;
+    background-color: white;
+}
+#video {
+	text-align: center;
+	margin-top:20px;
+    z-index:550;
+	margin-bottom:20px;
+}
+#video_small {
+	display:none;
+}
+@media all and (max-width: 820px) 
+{
+	#video_big {
+		display:none;
+	}
+	#video_small {
+		display:block;
+	}
+}
+#link:link, #link:visited, #link:active  {
+  font-family:Helvetica,Arial,sans-serif;
+  font-size: 28px;
+  line-height: 49px;
+  text-decoration: none;  
+  color: #006ce4;
+}
+#link:hover, #link.sel{
+  text-decoration: none;
+  color: #0c0c60;
+}
+#passer-intro:link, #passer-intro:visited, #passer-intro:active  {
+  font-family:Helvetica,Arial,sans-serif;
+  font-size: 28px;
+  line-height: 49px;
+  text-decoration: none;  
+  color: white;
+}
+#passer-intro:hover, #passer-intro.sel{
+  text-decoration: none;
+  color: #0c0c60;
+}
+
+/*************************************
+* 7. Footer
+*************************************/
+#footer {
+    z-index:550;
+	background-color:rgb(61,90,117);
+	background-color:rgba(61,90,117,0.9);
+}
+#first_block_footer {
+	float:left;
+	width:42%;
+}
+.footer_link{
+	margin-left:20px;
+	margin-right:20px;
+	padding-top:25px;
+	padding-bottom:10px;
+}
+.footer_link ul {
+	border-right: 2px dashed grey;
+
+	list-style: none;
+}
+.footer_link ul  li{	
+	padding-right: 15px;
+	padding-bottom:10px;
+}
+.footer_link ul li a,.footer_link ul li p  {
+	text-decoration: none;
+	font-size:15px;
+	color:black;
+	font-weight:bold
+}
+.footer_link ul li a:hover {
+	color: rgb(235,240,241);
+}
+/*
+ Fonds :	#3d5a75 blue foncé  (61,90,117)
+			#ebf0f1 blanc gris	  (235,240,241)
+			#0060d6 blue moyen (logo)  (0,96,214)
+
+*/
+.footer_link ul .sub-footer {	
+	padding-left:20px;
+	padding-bottom:2px;
+}
+.footer_link ul .sub-footer a {	
+	font-size:13px;	
+}

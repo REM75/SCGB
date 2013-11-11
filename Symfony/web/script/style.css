@@ -1,0 +1,498 @@
+/**************************************
+ http://www.scgb-salvaggio.fr
+
+ COULEURS
+ Fonds :	#3d5a75 blue foncé  (61,90,117)
+			#ebf0f1 blanc gris	  (235,240,241)
+			#0060d6 blue moyen (logo)  (0,96,214)
+ *  *****************************/
+
+ 
+/*************************************
+* 1. Structure
+*************************************/
+body{
+	margin: 0;
+	padding: 0;
+    font-family:Helvetica,Arial,sans-serif;
+    background-color: white;
+    color:black;
+    background-size: cover;  
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover;
+    background-color: #89b0d1;
+}
+h1 {
+	font-weight:100;
+	padding:0;
+	margin:0;
+}
+h2 {
+	font-weight:100;
+	padding:0;
+	margin:0;
+}
+a{
+	text-decoration:none;
+}
+#header {
+    z-index:550;
+	background-color:rgb(255,255,255);
+	background-color:rgba(255,255,255,0.9);
+}
+#footer {
+    z-index:550;
+	background-color:rgb(61,90,117);
+	background-color:rgba(61,90,117,0.9);
+}
+#content{
+    position:relative;
+    top:100px;
+    margin-bottom:50px;
+}
+#bottom {    
+    margin:auto;
+    max-width:1200px;
+    z-index:2;
+}
+.blue_box {
+    background-color: rgb(48,79,108);
+	/opacity:0.9;
+    background-color: rgba(48,79,108,0.9);
+    border-radius: 10px 10px 10px 10px;
+    padding-bottom:10px;
+    margin-bottom:20px;	
+	behavior: url(/js/pie/PIE.htc);
+
+}
+.white_box {
+    background-color: rgb(246,250,250);
+    background-color: rgba(246,250,250,0.9);
+    border-radius: 10px 10px 10px 10px;
+    padding-bottom:10px;
+    margin-bottom:20px;
+	behavior: url(/js/pie/PIE.htc);
+}
+#box_donwload {
+    min-height:480px;
+    background-color: rgba(246,250,250,0.9);   
+    border-radius: 10px 10px 10px 10px;
+}
+.text {    
+	text-align: justify;
+    font-size:13px;
+    margin-left:40px;
+    margin-right:40px;
+    text-align:justify;
+}
+.text_blue {
+	text-align: justify;
+    font-size:14px;
+    margin-left:20px;
+    margin-right:20px;
+    color:#1c3e5d;
+}
+.title {
+    font-family:'HelveticaNeueW01-UltLt';
+    font-size: 40px;
+    padding-top:30px;
+    margin-bottom:20px;
+    padding-bottom:30px;
+    border-bottom: 1px #b3b6b9 solid;
+    line-height: 100%;
+}
+.download_link {
+	padding-left: 30px;
+    background: url(../img/fleche_donwload.png) no-repeat left;
+}
+/*************************************
+* 2. Accueil
+*************************************/
+
+
+
+
+/*************************************
+* 3. Entreprise
+*************************************/
+#storyboard{	
+    position:relative;
+}
+#list_activite li{
+	list-style-type:circle;		
+    margin-left:20px;
+    margin-right:20px;
+}
+#click_on_member {
+    margin-left:40px;
+    margin-right:40px;
+    font-size: 13px;
+    z-index:1000;
+}
+.photo_histoire {
+	margin-top:20px;
+    width:30%;
+    cursor:pointer;
+}
+#photo1 {	
+	border: 2px solid blue;	
+	top:170px;
+}
+#photo2 {
+	top:170px;
+	left:33.3%;
+}
+#photo3{
+	top:170px;
+	left:66.6%;
+}
+.bio {	
+    position:absolute;
+	top:370px;
+    display:none;
+}
+#bio1 {	
+    display:block;
+}
+.bio_name {
+	padding-left:20px;
+    text-transform : uppercase;    
+    font-weight:15px;
+    font-size:20px;
+    margin-right:2%;
+}
+.bio_title {
+	padding-left:20px;
+    font-weight:35px;
+    font-size:16px;
+    text-transform : uppercase;
+}
+.bio_descript {
+	margin-left:20px;
+	padding-right:20px;
+	text-align:justify;
+    font-size:13px;
+    margin-right:1%;
+    overflow-y: hidden;
+}
+
+#entreprise_to_contact {
+	position:absolute;
+	bottom:50px;
+	display:block;
+}
+@media all and (max-width: 940px) {	
+	.bio {
+		margin-left:20px;
+		margin-right:40px;
+	}
+	
+}
+@media all and (max-width: 700px) {	
+	.photo_histoire {
+		width:30%;
+	}	
+	.bio {	
+		position:absolute;
+		top:330px;
+		padding-right:30px;
+	}
+}
+@media all and (min-width: 700px) {	
+	.name_title {
+		float:left;
+	}	
+	.bio_descript {
+		width:45%;
+		float:right;
+	}
+	
+}
+
+/*************************************
+* 4. Services
+*************************************/
+.services-list {
+	position:relative;
+	min-height:300px;
+	background-color:white;	
+    border-radius: 10px 10px 10px 10px;
+    padding-bottom:10px;
+    margin-bottom:20px;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 	
+	behavior: url(/js/pie/PIE.htc);
+}
+
+#first-services {
+    background: url(/image/services-presentation/amenagement-interieur.jpg) no-repeat right white;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+	box-shadow: 4px 4px 12px black;
+}
+#second-services {
+    background: url(/image/services-presentation/construction.jpg) no-repeat right white;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+	box-shadow: 4px 4px 12px black;
+}
+#third-services {
+    background: url(/image/services-presentation/renovation.jpg) no-repeat right white;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+	box-shadow: 4px 4px 12px black;
+}
+#fourth-services {
+    background: url(/image/services-presentation/reprise-sous-oeuvre.jpg) no-repeat right white;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+	box-shadow: 4px 4px 12px black;
+}
+#fifth-services {
+    background: url(/image/services-presentation/etudes2.jpg) no-repeat right white;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+	box-shadow: 4px 4px 12px black;
+}
+#add-services {
+    background: url(/image/services-presentation/realisation.jpg) no-repeat right white;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+	box-shadow: 4px 4px 12px black;
+}
+#contact-services {
+    background: url(/image/services-presentation/contact.jpg) no-repeat right white;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+}
+#services-contact {
+	padding-top:20px;
+	padding-bottom:20px;
+	text-align:center;
+	font-size:20px;
+	color:black;
+	text-decoration:none;
+}
+.title-services {
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	color:white;
+	padding-top:20px;
+	padding-bottom:20px;
+	text-align:center;
+	background-color: rgb(0,0,0);	
+	background-color: rgba(0,0,0,0.8);	
+	/*border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;*/
+}
+
+/*************************************
+* 5. Réalisation
+*************************************/
+
+
+/*************************************
+* 6. Contact
+*************************************/
+#coordonne {
+	margin-left:20px;
+}
+#bloc_formulaire {
+	min-height:650px;
+}
+
+#photo-siege-contact {
+	float:right;
+	width:30%;
+	margin-right:20px;
+}
+#formulaire_contact {
+	float:left;
+	width:50%;
+	margin-left:20px;
+}
+.control-group {
+	margin-bottom: 0.5em;
+	overflow: hidden;
+	font-size: 0.9em;
+}
+
+.control-label {
+	float: left;
+	width: 40%;
+	color: #3d5a75;
+}
+.control-group .controls {
+	width: 60%;
+	float: left;
+}
+.control-group .controls * {
+	width: 100%;
+}
+.control-group .input {
+	width: 95%;
+	float: left;
+	border: 1px solid #3d5a75;
+}
+#message {
+	width: 95%;
+}
+.control-subject
+{    
+	margin-bottom: 0.5em;
+	overflow: hidden;
+	font-size: 0.9em;
+}
+.label-subject {
+    width:40%;  
+    display: block;
+    float:left;
+}
+.styled-select
+{    
+   overflow: hidden;
+    width: 56.4%;    
+    height: 30px;
+    border-right: 1px solid #ccc; 
+	margin-bottom:10px;  
+    
+    background: url(/image/icones/arrow.png) no-repeat right white;
+}
+
+.styled-select select {
+    width:110%; 
+    height: 30px;
+   -webkit-appearance: none;
+    background: transparent; 
+}
+.styled-select select  option{
+    position:relative;
+    left:30px;
+    height:1px;
+    
+}
+input, textarea {
+	background: #fff;
+	border: 1px solid #3d5a75;
+	padding: 0.15em 0.5em;
+}
+select {
+	background: #fff;
+	border: 1px solid #3d5a75;
+	padding: 0.15em 0.5em;
+}
+
+input {
+	vertical-align: middle;
+}
+
+label {
+	display: block;
+	color: #636363;
+	font-weight: normal;
+}
+label.required:after {
+	content: "*";
+}
+
+/*************************************
+* 7. Footer
+*************************************/
+#footer {
+    z-index:550;
+	background-color:rgb(61,90,117);
+	background-color:rgba(61,90,117,0.9);
+}
+#first_block_footer {
+	float:left;
+	width:50%;
+}
+.footer_link{
+	padding-top:25px;
+	padding-bottom:10px;
+}
+.footer_link ul {
+	border-right: 2px dashed grey;
+
+	list-style: none;
+}
+.footer_link ul  li{	
+	padding-right: 15px;
+	padding-bottom:10px;
+}
+.footer_link ul li a,.footer_link ul li p  {
+	text-decoration: none;
+	font-size:15px;
+	color:black;
+	font-weight:bold
+}
+.footer_link ul li a:hover {
+	color: rgb(235,240,241);
+}
+/*
+ Fonds :	#3d5a75 blue foncé  (61,90,117)
+			#ebf0f1 blanc gris	  (235,240,241)
+			#0060d6 blue moyen (logo)  (0,96,214)
+
+*/
+.footer_link ul .sub-footer {	
+	padding-left:20px;
+	padding-bottom:2px;
+}
+.footer_link ul .sub-footer a {	
+	font-size:13px;	
+}
+
+/*************************************
+* 8. Mentions Légales
+*************************************/
+#me {
+	text-align: center;
+	font-weight:bold;
+}
+
+/*************************************
+* 9. Formulaire de Devis en ligne
+*************************************/
+.form-padding {
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:20px;
+}
+.submit-padding{	
+	margin-top:20px;
+}
+
+/*********************** Responsive ***********/
+@media all and (max-width: 939px) 
+{
+  .space_box
+    {
+    margin-left:30px;
+    margin-right:30px;
+    margin-bottom:30px;
+    padding-bottom:10px;
+  }
+  body{
+    background-size: ; 
+}
+}

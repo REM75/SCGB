@@ -1,0 +1,136 @@
+Name: Nom
+Id: Identifiant
+Loan: Prêt
+"Number": Numéro
+"Date": Date
+"Channel": Canal
+Reference: Référence
+Quantity: Quantité
+Description: Description
+All loans: Tous les Prêts
+Loans : Prêts
+Create a new loan: Créer un nouveau prêt
+Update a loan: Mettre à jour un prêt
+Delete this loan: Supprimer ce prêt
+Movements: Mouvements
+Loan out: Sortie prêt
+Loan return: Retour prêt
+Downgrade : Produit déclassé (qualité)
+Product downgrade: Produit déclassé
+Date of creation: Créé le
+Give back all : Tout retourner
+Loan one of all piece: Prêter un de chaque
+Reset: Remise à zéro
+
+Create a new loan step: Etape de prêts
+Update a loan step: Modifier une raison de prêt
+All loans steps: Toutes les étapes de prêts
+All movements: Tous les mouvements
+'Amount excl.': Montant HT
+
+Draft: Brouillon
+Loaned: Prêté
+To check: A vérifié
+Closed: Fermé
+
+Add: Ajout
+Return: Retour
+Back to the loan: Retour au prêt
+
+Supply: Approvisionnement
+Supplies: Approvisionnements
+Create a new supply: Créer un nouvel approvisionnement
+Create a new supply step: Etapes d'approvisionnement
+Create a new supply reason: Créer une nouvelle étape d'approvisionnement
+All supply steps: Toutes les étapes d'approvisionnement
+All supplies: Tous les approvisionnements
+
+Create a new fee category: Créer une nouvelle catégorie de frais
+Fee category: Catégories de Frais
+All fees categories: Toutes les catégories de Frais
+All fees: Tous les Frais
+Update a fee category: Mettre à jour une catégorie de frais
+
+Raw value: Valeur brute
+Received at: Reçu le
+Paid at: Payé le
+Sent at: Envoyé le
+Change rate: Taux de change
+Invoice reference: Référence de la facture
+Intern reference: Référence interne
+Supplier reference: Référence fournisseur
+Fees: Frais
+Fee: Frais
+Products: Produits
+Supplier setting: Paramètres fournisseur
+Update a supply: Mettre à jour un approvisionnement
+Delete this supply: Supprimer cette approvisionnement
+Delete this new fee: Effacer ce nouveau frais
+Delete this new reference: Effacer cette nouvelle référence
+Delete this fee: Effacer ce frais
+Delete this reference: Effacer cette référence
+Add a fee: Ajouter un frais
+Supply Setting: Paramètres de l'approvisionnement
+
+Fees categories: Catégorie de frais
+Fees value: Valeur des frais
+Jewelries value: Valeur des bijoux
+Count products: Nombres de produits
+Loaned value: Valeur du prêt
+
+Loans steps: Etape de prêt
+Supplies steps: Etape d'approvisionnement
+Locked settings: Etape bloquant les paramètres
+Locked products: Etape bloquant les produits
+Locked fees: Etape bloquant les frais
+
+Log state: Etat de stock
+Supply date: Date de l'appro.
+Computed formula: Formule de calcul
+FIFO method: Methodé FIFO
+Weighted average cost: Coût moyen pondéré
+Serial number: Numéro de série
+Generate stickers: Génération des étiquettes
+
+Start from the sticker No: Commencer à partir de la vignette n°
+Sticker setting: Paramétrage de l'étiquetage
+Generate: Générer
+Cancel: Annuler
+'{0} Error : The barcode field was empty.|]0,Inf]  Error : The barcode %serialNumber% does not exist.': '{0} Erreur : Le champ code-barres était vide.|]0,Inf]  Erreur : Le code-barres %serialNumber% n`existe pas.'
+Number of stickers: Nombre d'étiquettes
+Add or give back products with this interface does not allow the management of serial number.: Ajouter ou retourner des produits avec cette interface ne permet pas la gestion du numéro de série.
+Warning!: Attention !
+It is possible to add or return a product only when the loan is at a draf step.: Il est possible d'ajouter ou de retourner un produit seulement lorsque le prêt est à l'étape Brouillon.
+
+supply:
+    title: Synthèse des prêt
+    list.title: Tous les prêt
+    loan:
+        title: Prêts
+        list.title: Tous les prêt
+        update.title: Mettre à jour un prêt
+        new.title: Créer un nouveau prêt
+        add.title: Ajout de produits d'un prêt
+        return.title: Retour de produits d'un prêt
+    supply:
+        title: Approvisionnements
+        list.title: Tous les approvisionnements
+        update.title: Mettre à jour un approvisionnement
+        new.title: Créer un nouveau approvisionnement
+    barcode:
+        title: Outils pour code-barres
+    feecategory:
+        title: Catégories de frais
+        list.title: Toutes les catégories de frais
+        update.title: Mettre à jour une catégorie de frais
+        new.title: Créer une nouvelle catégorie de frais
+    loanstep:
+        title: Etapes de prêt
+        list.title: Toutes les étapes de prêt
+        update.title: Mettre à jour une étape de prêt
+        new.title: Créer une nouvelle étape de prêt
+    step:
+        title: Etapes d'approvisionnement
+        list.title: Toutes les étapes d'approvisionnement
+        update.title: Mettre à jour une étape d'approvisionnement
+        new.title: Créer une nouvelle étape d'approvisionnement

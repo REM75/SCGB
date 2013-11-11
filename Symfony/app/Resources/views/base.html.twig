@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<head>	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="/script/normalize.css" type="text/css" media="all" />		
+
+		<meta property="og:title" content="SCGB - Société de Construction Générale en Batîment" />
+		<meta property="og:locale" content="fr_FR" />
+		<meta property="og:url" content="http://scgb-salvaggio.fr/" />	
+		<meta property="og:description" content="S.C.G.B. Salvaggio est une P.M.E. oeuvrant dans les secteurs suivants :la construction, la rénovation, l'aménagement intérieur et la reprise en sous-oeuvre" />		
+		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('image/logos/scgb.ico') }}" />
+		<meta property="og:image" content="http://scgb-salvaggio.fr/image/galerie-photos/siege-SCGB.jpg" />		
+		<meta name="viewport" content="width=400, initial-scale=1.0">	
+		
+		<link rel="apple-touch-icon" href="{{ asset('image/apple-touch-57.jpg') }}" />
+		<link rel="apple-touch-icon" href="{{ asset('image/apple-touch-72.jpg') }}" sizes="72x72" />
+		<link rel="apple-touch-icon" href="{{ asset('image/apple-touch-114.jpg') }}" sizes="114x114" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+		<meta name="author" content="Rémy ANDREINI" />
+		<meta name="generator" content="Rémy ANDREINI" />
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+		<title>SCGB -{% block title %}{% endblock %}</title>
+
+		<meta name="description" content="S.C.G.B. Salvaggio est une P.M.E. oeuvrant dans les secteurs suivants :la construction, la rénovation, l'aménagement intérieur et la reprise en sous-oeuvre">
+
+		<meta name="keywords" content="ivry rénovation,ivry construction">	
+		
+		<!--[if lte IE 8]><script type="text/javascript" src="{{ asset('js/roundies.js') }}"></script><![endif]-->
+		
+		<!--  Superzided -->
+		<script src="{{ asset('js/supersized/supersized.3.2.7.min.js') }}" type="text/javascript"></script>
+		<script type="text/javascript" src="{{ asset('js/supersized/supersized.shutter.min.js') }}"></script>
+		<link rel="stylesheet" href="{{ asset('js/supersized/supersized.css') }}" type="text/css" media="screen" />	
+		<script src="{{ asset('js/supersized/index.background.resize.js') }}" type="text/javascript"></script>		
+		
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('script/bootstrap/bootstrap.min.css') }}" />
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('script/bootstrap/bootstrap-responsive.css') }}" />	
+
+		<!-- FancyBox -->
+		<script type="text/javascript" src="{{ asset('effet/fancybox/lib/jquery-1.9.0.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('effet/fancybox/lib/jquery.mousewheel-3.0.6.pack.jsv') }}"></script>
+		<script type="text/javascript" src="{{ asset('effet/fancybox/source/jquery.fancybox.js?v=2.1.4') }}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ asset('effet/fancybox/source/jquery.fancybox.css?v=2.1.4') }}" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('effet/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5') }}" />
+		<script type="text/javascript" src="{{ asset('effet/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5') }}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ asset('effet/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7') }}" />
+		<script type="text/javascript" src="{{ asset('effet/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7') }}"></script>
+		<script type="text/javascript" src="{{ asset('effet/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5') }}"></script>		
+		<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+	</style>
+				
+		<!-- Style -->
+		<link rel="stylesheet" media="screen" type="text/css"  href="{{ asset('script/style.css') }}" />
+		<link rel="stylesheet" media="screen" type="text/css"  href="{{ asset('script/style_menu.css') }}" />
+				
+	</head>
+
+<body>
+
+	<div id="header">
+		<div class="row-fluid">
+			<div class="span8">
+				<a href="/welcome.php" ><img  id="logo" src="{{ asset('image/logos/logo-scgb.png') }}" alt="Logo de la société SCGB"/> </a>			
+				
+					{% include '::menu.html.twig' %}
+			 </div>
+			
+			<div class="span4" >	
+				<div id="partenaire">
+					<p class="text_blue" style="margin-top: 15px;text-align: center"> <strong>Nos Labels Qualités : </strong>
+						<a href="http://www.qualibat.com/Views/PagesStatiques/Qualification.aspx" target="blank" rel="nofollow"><img style="padding-left:40px; width:60px;" id="logo" src="{{ asset('image/logos/qualibat.jpg') }}" /> </a>
+					</p>
+				</div>							
+				<div id="adress-header">
+				<p class="text_blue" style=" padding-top:15px; text-align: center"><strong>44, rue Constant Coquelin - 94400 Vitry sur Seine <br/> 
+				Tél : 01.55.53.17.85</strong></p>
+				</div>	
+			</div>		
+		</div>
+	</div>
+	
+    <div id="content" class="container-fluid ">
+        {% block body %}{% endblock %}
+    </div>
+		
+		
+<br/><br/><br/><br/>
+<div id="footer">
+	<div class="row-fluid">
+		<div class="span6">				
+			<div id="first_block_footer" class="footer_link"> 
+				<ul  class="text marge">
+					<li><a href="/welcome.php">Accueil</a></li>
+					<li><a href="/entreprise/histoire.php">L'entreprise </a></li>
+					<li><a href="{{ path('devis_new')}}"><span>Devis en Ligne</span></a></li>
+					<li><a href="/entreprise/contact.php">Nos Contacts</a></li>
+					<li><a href="/home/mentionslegales.php">Mentions Légales</a></li>
+				</ul>
+			</div>
+			
+			<div id="second_block_footer" class="footer_link"> 
+				<ul class="text marge">
+					<li><a href="/services/presentation.php">Nos Services :</a></li>
+					<li class="sub-footer"><a href="/services/amenagement.php">Aménagement Intérieur</a></li>
+					<li class="sub-footer"><a href="/services/construction.php">Construction</a></li>
+					<li class="sub-footer"><a href="/services/renovation.php">Rénovation </a></li>
+					<li class="sub-footer"><a href="/services/reprises.php">Reprise en sous-oeuvre</a></li>
+					<li class="sub-footer"><a href="/services/etudes.php">Etudes</a></li>
+				</ul>
+			</div>	
+		
+		</div>			
+		<div class="span6" >
+			<div id="second_block_footer" class="footer_link"> 
+				<ul class="text marge">
+					<li><p>Nos Partenaires :</p></li>
+					<li> <a href="#" ><img style="width:60px;" id="logo" src="{{ asset('image/logos/qualibat.jpg') }}" alt="logo qualibat"/> </a>
+						<a href="#" ><img style="padding-left:40px; width:60px;" id="logo" src="{{ asset('image/logos/qualibat.jpg') }}" alt="logo qualibat"/></a> </li>
+				</ul>
+			</div>	
+		
+		</div>		
+	</div>
+	
+</div>
+	
+</body>
+</html>

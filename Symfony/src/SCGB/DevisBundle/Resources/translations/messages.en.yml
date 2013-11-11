@@ -1,0 +1,35 @@
+supply:
+    title: Loans Summary
+    list.title: All loans
+    loan:
+        title: Loans
+        list.title: All loans
+        update.title: Update a loan
+        new.title: Create a new loan
+    supply:
+        title: Supplies
+        list.title: All supplies
+        update.title: Update a supply
+        new.title: Create a new supply
+    barcode:
+        title: Barcode tools
+    logreason:
+        title: Movements steps
+        list.title: All movements
+        update.title: Update a movement
+        new.title: Create a new movement
+    feecategory:
+        title: Fee Categories
+        list.title: All fee categories
+        update.title: Update a fee category
+        new.title: Create a new fee category
+    loanstep:
+        title: Loan steps
+        list.title: All loan steps
+        update.title: Update a loan step
+        new.title: Create a new loan step
+    step:
+        title: Supply steps
+        list.title: All supply steps
+        update.title: Update a supply step
+        new.title: Create a new supply step

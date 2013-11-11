@@ -1,0 +1,6 @@
+#SCGB\DevisBundle\Entity\Devis:
+ #   properties:
+  #      globalAmount:
+   #         - NotBlank: ~
+    #    totalTime:
+     #       - NotBlank: ~

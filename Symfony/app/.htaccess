@@ -1,0 +1,8 @@
+Options +FollowSymlinks -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} ^/path/to/web/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ web/$1 [QSA]
+</IfModule>

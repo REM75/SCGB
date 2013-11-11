@@ -1,0 +1,11 @@
+services:
+    ambrelouise_supply.loan.handler:
+        class: Ambrelouise\SupplyBundle\Handler\LoanHandler
+        arguments: [@service_container]
+    ambrelouise_supply.supply.handler:
+        class: Ambrelouise\SupplyBundle\Handler\SupplyHandler
+        arguments: [@service_container]
+    ambrelouise_supply.serial_number.pdf:
+        class: Ambrelouise\SupplyBundle\Pdf\SerialNumberPdf
+        calls:
+            - [ setContainer, [ @service_container, @translator ] ]

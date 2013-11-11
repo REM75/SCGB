@@ -1,0 +1,89 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Mon devis en ligne{% endblock %}
+{% set language = 'fr' %}
+
+{% block body %}
+<div id="bottom" class="row-fluid ">
+		<div class="space_box white_box">
+			<h1 class="text_blue title text-left " > Etablir un devis</h1>
+			 
+			<div class="entity-form spacer">
+				<form method="post" {{ form_enctype(form) }}>
+					<div class="form-horizontal form-padding">						
+						<legend>Saisissez vos travaux</legend>
+						<span class="row">						
+							<span id="sub-form" class="span12">
+								<fieldset>
+									<div class="space" style="margin-bottom:10px;">
+										<a href="#" class="btn btn-success" id="add_reference_link_{{ language }}">Ajouer une pièce</a>
+									</div>
+									<ul class="nav nav-tabs">
+										{% for product in form.rooms %}
+											<li{% if loop.first %} class="active"{% endif %}><a data-toggle="tab" href="#tab_reference_{{ language }}_{{ loop.index }}">Pièce {{ loop.index }}</a></li>
+										{% endfor %}
+									 </ul>
+
+									<div id="supply_references_{{ language }}" class="tab-content" data-prototype="{{ form_widget(form.rooms.vars.prototype) | e }}">
+								   {% for product in form.rooms %}
+										<div class="tab-pane form-collection row-fluid{% if loop.first %} active{% endif %}" id="tab_reference_{{ language }}_{{ loop.index }}">
+											{{ form_widget(product, {'form_type' : 'horizontal'}) }}
+											<div class="pull-right"><a class="btn btn-warning" id="remove_reference_link_{{ loop.index }}" onclick="delete_reference_link({{ loop.index  }});" >Supprimer la pièce</a></div>
+											<script>
+													function delete_reference_link(id){
+														$('#tab_reference_fr_'+id+'').parent().parent().find('ul.nav li.active').remove();
+														$('#tab_reference_fr_'+id+'').remove();
+													}
+											</script>
+										</div>
+									{% endfor %}
+									</div>
+								</fieldset>
+							</span>
+						</span>
+						
+						{{ form_rest(form) }} 
+						{{ form_errors(form) }}
+						<div class="alert alert-info">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							<strong>Info sur les Ajouts/Modififactions :</strong> Valider une fois que toutes les pièces dans lesquels vous voulez faire des travaux ont été ajoutées/modifiées.
+						</div>
+						<input type="submit" class="btn btn-primary submit-padding" />
+					</div>
+			  </form>
+			</div>
+		</div>
+</div>
+
+<script>
+
+jQuery(document).ready(function() {
+        $('#add_reference_link_fr').on('click', function(e) {
+            e.preventDefault();
+            addFormReference($('#supply_references_fr'), 'fr');
+        });
+});
+
+function addFormReference(collectionHolder, language) {
+    $('#supply_references_'+language+' .tab-pane').removeClass('active');
+    $('#supply_references_'+language).parent().find('ul.nav li').removeClass('active');
+    var len = collectionHolder.children().length + 1;
+    var prototype = collectionHolder.attr('data-prototype');
+    var newForm = prototype.replace(/__name__/g, len);
+    $('#supply_references_'+language).parent().find('ul.nav').append('<li class="active"><a data-toggle="tab" href="#tab_reference_'+language+'_'+len+'">Pièce '+len+'</a></li>');
+    var $newFormDiv = $('<div class="tab-pane form-collection row-fluid active" id="tab_reference_'+language+'_'+len+'"></div>').append(newForm);
+    collectionHolder.append($newFormDiv);
+    addReferenceFormDeleteLink($newFormDiv);
+}
+function addReferenceFormDeleteLink($referenceFormDiv, language, len) {
+    var $removeFormA = $('<div class="pull-right"><a href="#" class="btn btn-warning" id="remove_reference_link_'+language+'_'+len+'">Supprimer la pièce</a></div>');
+    $referenceFormDiv.prepend($removeFormA);
+
+    $removeFormA.on('click', function(e) {
+        e.preventDefault();
+        $referenceFormDiv.parent().parent().find('ul.nav li.active').remove();
+        $referenceFormDiv.remove();
+    });
+}
+</script>
+{% endblock %}
