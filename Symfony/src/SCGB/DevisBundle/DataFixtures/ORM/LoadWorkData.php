@@ -27,7 +27,8 @@ class LoadWorkData extends AbstractFixture implements OrderedFixtureInterface
     */
     public function Load(ObjectManager $manager)
     {
-        $work = new Work();		
+        $work = new Work();	
+		$work->setId(1);		
         $work->setReference('paint_01');
         $work->setDescription('blablabla 1');
         $work->setDuration(1,2);

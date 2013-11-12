@@ -135,7 +135,7 @@ class Room
      */
     public function addRoomWork(\SCGB\DevisBundle\Entity\RoomWork $roomWork)
     {
-        $roomWork->setSupply($this);
+        $roomWork->setRoom($this);
         $this->roomWorks[] = $roomWork;
 
         return $this;
