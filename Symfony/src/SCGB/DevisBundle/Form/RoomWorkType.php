@@ -1,11 +1,11 @@
 <?php
 
 /*******************************************************
-*   Twiy - 2013
+*   SCGB - 2013
 *     Created by : Rémy ANDREINI
-*     Date : 24/04/2013
+*     Date : 13/11/2013
 *   % Last modification : $Id$
-*    Contact : remy.andreini@twiy.fr
+*    Contact : andreini@ece.fr
 *******************************************************/
 
 namespace SCGB\DevisBundle\Form;

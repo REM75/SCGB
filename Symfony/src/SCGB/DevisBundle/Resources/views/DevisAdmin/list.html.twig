@@ -7,7 +7,7 @@
 {% block body %}
 <div id="bottom" class="row-fluid ">
 		<div class="space_box white_box">
-			<h1 class="text_blue title text-left " > Mon devis</h1>
+			<h1 class="text_blue title text-left " > Mon devis / Identifiant : {{ entity.id }} <span class="pull-right">Coût total : {{ entity.globalAmount }} €</span></h1>
 			
 			<div class="form-padding">
 				<legend>Vos différentes pièces <a href="{{ path('devis_update', {'id':entity.id}) }}" class="btn pull-right" id="udapte_room">Modifier mes pièces</a></legend>                    

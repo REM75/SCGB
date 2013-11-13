@@ -1,11 +1,11 @@
 <?php
 
 /*******************************************************
-*   Twiy - 2013
+*   SCGB - 2013
 *     Created by : Rémy ANDREINI
-*     Date : 24/04/2013
+*     Date : 13/11/2013
 *   % Last modification : $Id$
-*    Contact : remy.andreini@twiy.fr
+*    Contact : andreini@ece.fr
 *******************************************************/
 
 namespace SCGB\DevisBundle\Entity;
@@ -51,6 +51,11 @@ class Work
      * @ORM\Column(name="duration", type="decimal", scale=2, nullable=true)
      */
     private $duration;
+	
+	/**
+     * @ORM\Column(name="unit_cost", type="decimal", scale=2, nullable=true)
+     */
+    private $unitCost;
 
 	/**
      * @ORM\Column(name="numberofPeoplemin", type="integer", nullable=true)
@@ -175,6 +180,29 @@ class Work
         return $this->duration;
     }
 	
+	 /**
+     * Set unitCost
+     *
+     * @param float $unitCost
+     *
+     * @return Work
+     */
+    public function setUnitCost($unitCost)
+    {
+        $this->unitCost = $unitCost;
+
+        return $this;
+    }
+
+    /**
+     * Get unitCost
+     *
+     * @return float
+     */
+    public function getUnitCost()
+    {
+        return $this->unitCost;
+    }
 	
      /**
      * Set reference

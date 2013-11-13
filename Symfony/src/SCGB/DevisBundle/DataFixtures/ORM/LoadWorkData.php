@@ -1,11 +1,11 @@
 <?php
 
 /*******************************************************
-*   Twiy - 2012
-*     Created by : Clotaire RENAUD
-*     Date : 22/03/2012
+*   SCGB - 2013
+*     Created by : Rémy ANDREINI
+*     Date : 12/11/2013
 *   % Last modification : $Id$
-*    Contact : clotaire.renaud@twiy.fr
+*    Contact : andreini@ece.fr
 *******************************************************/
 
 
@@ -29,13 +29,22 @@ class LoadWorkData extends AbstractFixture implements OrderedFixtureInterface
     {
         $work = new Work();	
 		$work->setId(1);		
-        $work->setReference('paint_01');
-        $work->setDescription('blablabla 1');
-        $work->setDuration(1,2);
+        $work->setReference('Peinture support prêt');
+        $work->setDescription('Le mur est lisse et préparé.Protection des surfaces, ponçage ou lessivage des murs. Inclut une sous couche et si nécessaire deux couches de peinture.');
+        $work->setDuration(0,2);
         $work->setNumberofPeoplemin(1);
-        $work->setDuration(10,2);
 		
         $this->addReference('work-1', $work);		
+        $manager->persist($work);
+		
+		$work = new Work();	
+		$work->setId(1);		
+        $work->setReference('Peinture + préparation du support');
+        $work->setDescription('Support partiellement dégradé. Rebouchage et mastiquage des irrégularités. Passage d\'un enduit de lissage. Protection des surfaces, ponçage ou lessivage des murs. Inclut une sous couche et si nécessaire deux couches de peinture.');
+        $work->setDuration(0,4);
+        $work->setNumberofPeoplemin(1);
+		
+        $this->addReference('work-2', $work);		
         $manager->persist($work);
 
         $manager->flush();

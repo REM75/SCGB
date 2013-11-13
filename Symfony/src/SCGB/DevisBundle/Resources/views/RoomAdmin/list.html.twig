@@ -12,6 +12,7 @@
 			<tr>
 				<th style="text-align:center">{% trans %}Travail{% endtrans %}</th>
 				<th style="text-align:center">{% trans %}Quantité (m²){% endtrans %}</th>
+				<th style="text-align:center">{% trans %}Prix Unitaire (€){% endtrans %}</th>
 				<th style="text-align:center">{% trans %}Description{% endtrans %}</th>
 				<th style="text-align:center">{% trans %}Vos commentaires{% endtrans %}</th>
 			</tr>
@@ -19,6 +20,7 @@
 				<tr>
 					<td style="text-align:center;width:80px;">{{ roomWork.work.reference}}</td>
 					<td style="text-align:center;width:20px;">{{ roomWork.quantity}}</td>
+					<td style="text-align:center;width:20px;">{{ roomWork.work.unitCost}}</td>
 					<td style="text-align:center;width:80px;text-align:justify;">{{ roomWork.work.description}}</td>
 					<td style="text-align:center;width:80px;">{{ roomWork.comment}}</td>
 				</tr>

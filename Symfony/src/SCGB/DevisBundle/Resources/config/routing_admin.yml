@@ -18,3 +18,8 @@ room_remove:
 room_add_work:
     pattern:  /devis/room/{id}/add-work
     defaults: { _controller: SCGBDevisBundle:RoomAdmin:addWork }
+
+devis_get_back:
+    pattern:  /devis/find
+    defaults: { _controller: SCGBDevisBundle:DevisAdmin:find }
+

@@ -1,11 +1,11 @@
 <?php
 
 /*******************************************************
-*   Twiy - 2013
+*   SCGB - 2013
 *     Created by : Rémy ANDREINI
-*     Date : 24/04/2013
+*     Date : 13/11/2013
 *   % Last modification : $Id$
-*    Contact : remy.andreini@twiy.fr
+*    Contact : andreini@ece.fr
 *******************************************************/
 
 namespace SCGB\DevisBundle\Controller;
@@ -34,24 +34,24 @@ class DevisAdminController extends Controller
 		$devis = new Devis();
 		$form = $this->createForm(new DevisType(), $devis);
 		$form->setData($devis);
-							
-		$request = $this->get('request');	
-		
+
+		$request = $this->get('request');
+
 		if ($request->getMethod() == 'POST') {
 			  $form->bind($request);
-		 
+
 			  if ($form->isValid()) {
 				$em = $this->getDoctrine()->getManager();
 				$em->persist($devis);
 				$em->flush();
-		 
+
 				return $this->redirect($this->generateUrl('devis_update', array('id' => $devis->getId())));
-			  }		  
+			  }
 		}
 
 		return $this->render('SCGBDevisBundle:DevisAdmin:new.html.twig', array('form' => $form->createView(),));
 	}
-	
+
 	/**
     * Update an entity
     * @param (integer) $id id of the entity to update
@@ -66,29 +66,29 @@ class DevisAdminController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('No entity found for id '.$id);
         }
-		
+
 		$form = $this->createForm(new DevisType(), $entity);
 		$form->setData($entity);
-							
-							
-		$request = $this->get('request');	
-		
+
+
+		$request = $this->get('request');
+
 		if ($request->getMethod() == 'POST') {
 			  $form->bind($request);
-		 
+
 			  if ($form->isValid()) {
 				$em = $this->getDoctrine()->getManager();
 				$em->persist($entity);
 				$em->flush();
-				
+
 				return $this->redirect($this->generateUrl('devis_list', array('id' => $entity->getId())));
-			  }		  
+			  }
 		}
-		
+
 		return $this->render('SCGBDevisBundle:DevisAdmin:new.html.twig', array('form' => $form->createView(),'entity' => $entity));
 
     }
-	
+
 	/**
     * List an entity
     * @param (integer) $id id of the entity to list
@@ -102,12 +102,47 @@ class DevisAdminController extends Controller
         $entity = $em->getRepository('SCGBDevisBundle:Devis')->find($id);
         if (!$entity) {
             throw $this->createNotFoundException('No entity found for id '.$id);
-        }	
-							
-							
-		$request = $this->get('request');	
-				
+        }
+		$newcost = 0;
+		foreach ($entity->getRooms() as $room) {
+			$newcost += $room->getTotalWorkAmount();
+        }
+		$entity->setGlobalAmount($newcost);
+
+		$request = $this->get('request');
+
 		return $this->render('SCGBDevisBundle:DevisAdmin:list.html.twig', array('entity' => $entity));
+
+    }
+
+	/**
+    * Find an entity
+    * @param (integer) $id id of the entity to list
+    *
+    * @return show the property list in html format
+    */
+    public function findAction()
+    {
+        $request = $this->get('request');
+        $em = $this->getDoctrine()->getManager();        
+
+		if ($request->getMethod() == 'POST') {
+			$entity = $em->getRepository('SCGBDevisBundle:Devis')->find($id);
+			if (!$entity) {
+				throw $this->createNotFoundException('No entity found for id '.$id);
+			}
+			  $form->bind($request);
+
+			  if ($form->isValid()) {
+				$em = $this->getDoctrine()->getManager();
+				$em->persist($entity);
+				$em->flush();
+
+				return $this->redirect($this->generateUrl('devis_list', array('id' => $entity->getId())));
+			  }
+		}
+
+		return $this->render('SCGBDevisBundle:DevisAdmin:find.html.twig');
 
     }
 

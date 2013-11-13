@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.aud</groupId>
+	<artifactId>scgbdevis</artifactId>
+	<version>1.0-DevisOnline</version>
+	<name>Devis en ligne</name>
+	<url>http://www.scgb-salvaggio.fr</url>
+	<developers>
+		<developer>
+			<name>Rémy ANDREINI</name>
+			<roles>
+				<role>Developper</role>
+			</roles>
+			<organization>Bénéficiaire SCGB Salvaggio</organization>
+		</developer>
+	</developers>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.version>4.8.2</junit.version>
+		<guava.version>10.0</guava.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<!-- Junit -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- Guava -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+	
+		<dependency>
+			<groupId>com.sun.xml.ws</groupId>
+			<artifactId>jaxws-rt</artifactId>
+			<version>2.1.3</version>
+		 </dependency>
+		 
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+            
+		<!-- Guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+	</dependencies>
+	
+	<description>Module de devis en ligne pour le site de construction générale en batiment scgb-Salvaggio.fr</description>
+</project>

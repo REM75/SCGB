@@ -11,7 +11,7 @@
 			<div class="entity-form spacer">
 				<form method="post" {{ form_enctype(form) }}>
 					<div class="form-horizontal form-padding">
-						<legend>Votre {{ entity.name }} <a href="{{ path('devis_list', {'id':devisId}) }}" class="btn pull-right" id="return_room">Retourner au récapitulatif des pièces</a></legend>	
+						<legend>Votre {{ entity.name }} <a href="{{ path('devis_get_back', {'id':devisId}) }}" class="btn pull-right" id="return_room">Retourner au récapitulatif des pièces</a></legend>	
 						<span class="row-fluid">
 							<span class="span3">
 								<ul class="unstyled">

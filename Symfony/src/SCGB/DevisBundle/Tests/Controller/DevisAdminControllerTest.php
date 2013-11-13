@@ -1,11 +1,11 @@
 <?php
 
 /*******************************************************
-*   Twiy - 2013
+*   SCGB - 2013
 *     Created by : Rémy ANDREINI
-*     Date : 24/04/2013
+*     Date : 13/11/2013
 *   % Last modification : $Id$
-*    Contact : remy.andreini@twiy.fr
+*    Contact : andreini@ece.fr
 *******************************************************/
 
 namespace SCGB\DevisBundle\Tests\Controller;
@@ -39,10 +39,11 @@ class DevisAdminControllerTest extends WebTestCase
         $this->assertTrue($crawler->filter('html:contains("Ajouts/Modififactions")')->count() > 0);
 
         $crawler = $this->client->request('GET', '/devis/room/10/add-work');
-        $this->assertTrue($crawler->filter('html:contains("Mon devis")')->count() > 0);
+        $this->assertTrue($crawler->filter('html:contains("Ma Pièce & Ses Travaux")')->count() > 0);
 
         $crawler = $this->client->request('GET', '/devis/4/update');
         $this->assertTrue($crawler->filter('html:contains("Saisissez vos travaux")')->count() > 0);
+
     }
 
     /**
@@ -50,7 +51,7 @@ class DevisAdminControllerTest extends WebTestCase
     */
     public function testNewAndRemove()
     {
-		die();
+		/*
         $crawler = $this->client->request('GET', '/admin/supply/new');
         $this->assertTrue($crawler->filter('html:contains("Create a new supply")')->count() > 0);
 
@@ -91,7 +92,8 @@ class DevisAdminControllerTest extends WebTestCase
         $form['supply[fees][0][value]'] = '120';
         $crawler = $this->client->submit($form);
         $this->assertTrue($crawler->filter('html:contains("Jewelries value 140.00")')->count() > 0);
-        $this->assertTrue($crawler->filter('html:contains(" Fees value 90.02")')->count() > 0);
+        $this->assertTrue($crawler->filter('html:contains(" Fees value 90.02")')->count() > 0);*/
+
 
     }
 
