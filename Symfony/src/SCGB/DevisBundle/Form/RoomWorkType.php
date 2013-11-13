@@ -17,6 +17,7 @@ use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use SCGB\DevisBundle\Entity\Work;
 
 
 /**
@@ -33,11 +34,27 @@ class RoomWorkType extends AbstractType
     * @return null
     */
     public function buildForm(FormBuilderInterface $builder, array $options)
-    {		        
-        $builder->add('quantity', 'text', array('label' => 'Quantité', 'required' => true));		
+    {
+		/*$builder->add('work', 'entity', array('label' => 'Travail',
+		  'class'    => 'SCGBDevisBundle:Work',
+		  'property' => 'reference',
+		  'multiple' => true)
+		);*/
+		$builder->add('work', 'entity',
+            array( 'label' => 'Travail',
+                'class' => 'SCGBDevisBundle:Work',
+                'property' => 'reference',
+                'query_builder' =>
+                    function(\SCGB\DevisBundle\Entity\WorkRepository $r) {
+                        return $r->getQuerySelectType();
+                    },
+                'required' => true,
+        ));
+        $builder->add('quantity', 'text', array('label' => 'Quantité (m²)', 'required' => true));
         $builder->add('comment', 'textarea', array('label' => 'Commentaire', 'required' => false));
+
     }
-	
+
 	/**
     * setDefaultOptions
     * @param OptionsResolverInterface $resolver

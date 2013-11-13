@@ -20,6 +20,11 @@ use Doctrine\ORM\EntityRepository;
  */
 class WorkRepository extends EntityRepository
 {
-
+	public function getQuerySelectType()
+	{
+		$qb = $this->createQueryBuilder('a')
+				   ->where('a.id > 0'); 
+		return $qb;
+	}
 
 }

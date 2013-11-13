@@ -48,15 +48,16 @@ class RoomAdminController extends Controller
 			  $form->bind($request);
 		 
 			  if ($form->isValid()) {
+				$roomWork->setRoom($entity);
 				$em = $this->getDoctrine()->getManager();
 				$em->persist($roomWork);
 				$em->flush();
 		 
-				return $this->redirect($this->generateUrl('devis_update', array('id' => $devis->getId())));
+				return $this->redirect($this->generateUrl('room_add_work', array('id' => $entity->getId(), 'entity' => $entity, 'devisId' => $entity->getDevis()->getId())));
 			  }		  
 		}
 
-		return $this->render('SCGBDevisBundle:RoomAdmin:new.html.twig', array('form' => $form->createView(),'entity' => $entity));
+		return $this->render('SCGBDevisBundle:RoomAdmin:new.html.twig', array('form' => $form->createView(), 'entity' => $entity, 'devisId' => $entity->getDevis()->getId()));
 	}
 	
 	/**

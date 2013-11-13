@@ -119,7 +119,7 @@ class RoomWork
      *
      * @return RoomWork
      */
-    public function setWork(\SCGB\DevisBundle\Entity\Work $work = null)
+    public function setWork(\SCGB\DevisBundle\Entity\Work $work)
     {
         $this->work = $work;
 
@@ -143,7 +143,7 @@ class RoomWork
      *
      * @return RoomWork
      */
-    public function setRoom(\SCGB\DevisBundle\Entity\Room $room = null)
+    public function setRoom(\SCGB\DevisBundle\Entity\Room $room)
     {
         $this->room = $room;
 
