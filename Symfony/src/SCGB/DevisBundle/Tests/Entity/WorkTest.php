@@ -67,7 +67,7 @@ class WorkTest extends WebTestCase
         $data = 'test';
         $work->setReference($data);
         $this->assertEquals($data, $work->getReference());
-		
+
         $data = 'test';
         $work->setDescription($data);
         $this->assertEquals($data, $work->getDescription());
@@ -75,7 +75,7 @@ class WorkTest extends WebTestCase
         $data = 3;
         $work->setDuration($data);
         $this->assertEquals($data, $work->getDuration());
-		
+
         $data = 3;
         $work->setNumberofPeoplemin($data);
         $this->assertEquals($data, $work->getNumberofPeoplemin());

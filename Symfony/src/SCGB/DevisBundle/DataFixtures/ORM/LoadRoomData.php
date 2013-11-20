@@ -27,36 +27,36 @@ class LoadRoomData extends AbstractFixture implements OrderedFixtureInterface
     */
     public function Load(ObjectManager $manager)
     {
-        $room = new Room();		
+        $room = new Room();
         $room->setId(1);
         $room->setCategory('room');
         $room->setTotalWorkAmount(100);
         $room->setName('Salon');
         $room->setSize(40);
         $room->setWidth(2,5);
-		
-        $this->addReference('salon-1', $room);		
+
+        $this->addReference('salon-1', $room);
         $manager->persist($room);
-		
-		$room = new Room();		
+
+        $room = new Room();
         $room->setId(2);
         $room->setCategory('kitchen');
         $room->setTotalWorkAmount(250);
         $room->setName('Cuisine');
         $room->setSize(10);
         $room->setWidth(2,5);
-		
-        $this->addReference('cuisine-1', $room);		
+
+        $this->addReference('cuisine-1', $room);
         $manager->persist($room);
-		
-		$room = new Room();		
+
+        $room = new Room();
         $room->setId(3);
         $room->setCategory('kitchen');
         $room->setTotalWorkAmount(250);
         $room->setName('To delete');
         $room->setSize(10);
         $room->setWidth(2,5);
-			
+
         $manager->persist($room);
 
         $manager->flush();

@@ -31,18 +31,18 @@ class Work
      * @ORM\Id()
      */
     protected $id;
-	
-	 /**
+
+    /**
      * @ORM\OneToMany(targetEntity="SCGB\DevisBundle\Entity\RoomWork", mappedBy="work", cascade={"persist", "remove"})
      */
     protected $roomWorks;
-	
-	/**
+
+    /**
      * @ORM\Column(name="reference", type="string", length=150, nullable=true)
      */
     private $reference;
-	
-	/**
+
+    /**
      * @ORM\Column(name="description", type="string", length=500, nullable=true)
      */
     private $description;
@@ -51,13 +51,13 @@ class Work
      * @ORM\Column(name="duration", type="decimal", scale=2, nullable=true)
      */
     private $duration;
-	
-	/**
+
+    /**
      * @ORM\Column(name="unit_cost", type="decimal", scale=2, nullable=true)
      */
     private $unitCost;
 
-	/**
+    /**
      * @ORM\Column(name="numberofPeoplemin", type="integer", nullable=true)
      */
     private $numberofPeoplemin;
@@ -120,8 +120,8 @@ class Work
 
         $this->updatedAt = new \DateTime();
     }
-	
-	/**
+
+    /**
      * Add roomWorks
      *
      * @param \SCGB\DevisBundle\Entity\RoomWork $roomWork
@@ -179,8 +179,8 @@ class Work
     {
         return $this->duration;
     }
-	
-	 /**
+
+    /**
      * Set unitCost
      *
      * @param float $unitCost
@@ -203,7 +203,7 @@ class Work
     {
         return $this->unitCost;
     }
-	
+
      /**
      * Set reference
      *
@@ -227,8 +227,8 @@ class Work
     {
         return $this->reference;
     }
-	
-	/**
+
+    /**
      * Set description
      *
      * @param string $description

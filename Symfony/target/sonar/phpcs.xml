@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="1.5.0-RC2">
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\Devis.php">
+  <error line="2" column="3" severity="error" message="Constants must be uppercase; expected PHP but found php" source="Generic.NamingConventions.UpperCaseConstantName.ConstantNotUpperCase"/>
+  <error line="19" column="1" severity="warning" message="This comment is 44% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="29" column="6" severity="warning" message="This comment is 55% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="36" column="5" severity="warning" message="This comment is 62% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="37" column="1" severity="warning" message="Line exceeds 80 characters; contains 115 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="41" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="46" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="51" column="5" severity="warning" message="This comment is 57% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="56" column="5" severity="warning" message="This comment is 57% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="95" column="5" severity="warning" message="This comment is 44% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisAdminController.php">
+  <error line="13" column="1" severity="warning" message="This comment is 48% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="35" column="35" severity="error" message="New objects must be assigned to a variable" source="Squiz.Objects.ObjectInstantiation.NotAssigned"/>
+  <error line="48" column="108" severity="warning" message="Line exceeds 80 characters; contains 107 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="52" column="113" severity="warning" message="Line exceeds 80 characters; contains 112 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="70" column="35" severity="error" message="New objects must be assigned to a variable" source="Squiz.Objects.ObjectInstantiation.NotAssigned"/>
+  <error line="84" column="107" severity="warning" message="Line exceeds 80 characters; contains 106 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="88" column="132" severity="error" message="Line exceeds maximum limit of 120 characters; contains 131 characters" source="Generic.Files.LineLength.MaxExceeded"/>
+  <error line="114" column="103" severity="warning" message="Line exceeds 80 characters; contains 102 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="132" column="85" severity="warning" message="Line exceeds 80 characters; contains 84 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="136" column="15" severity="error" message="Line indented incorrectly; expected 12 spaces, found 14" source="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
+  <error line="141" column="107" severity="warning" message="Line exceeds 80 characters; contains 106 characters" source="Generic.Files.LineLength.TooLong"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisAdminControllerTest.php">
+  <error line="16" column="1" severity="warning" message="Line exceeds 80 characters; contains 82 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="36" column="103" severity="warning" message="Line exceeds 80 characters; contains 102 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="39" column="100" severity="warning" message="Line exceeds 80 characters; contains 99 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="42" column="102" severity="warning" message="Line exceeds 80 characters; contains 101 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="45" column="100" severity="warning" message="Line exceeds 80 characters; contains 99 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="54" column="9" severity="warning" message="This comment is 69% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="56" column="1" severity="warning" message="Line exceeds 80 characters; contains 97 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="60" column="1" severity="error" message="Line exceeds maximum limit of 120 characters; contains 128 characters" source="Generic.Files.LineLength.MaxExceeded"/>
+  <error line="75" column="1" severity="warning" message="Line exceeds 80 characters; contains 85 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="94" column="1" severity="warning" message="Line exceeds 80 characters; contains 100 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="95" column="98" severity="warning" message="Line exceeds 80 characters; contains 97 characters" source="Generic.Files.LineLength.TooLong"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisTest.php">
+  <error line="99" column="9" severity="warning" message="This comment is 68% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisType.php">
+  <error line="35" column="12" severity="warning" message="The method parameter $options is never used" source="Generic.CodeAnalysis.UnusedFunctionParameter.Found"/>
+  <error line="37" column="9" severity="warning" message="Line exceeds 80 characters; contains 106 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="37" column="9" severity="warning" message="This comment is 68% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="38" column="9" severity="warning" message="Line exceeds 80 characters; contains 100 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="38" column="9" severity="warning" message="This comment is 68% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="39" column="105" severity="warning" message="Line exceeds 80 characters; contains 104 characters" source="Generic.Files.LineLength.TooLong"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\LoadRoomWorkData.php">
+  <error line="22" column="82" severity="warning" message="Line exceeds 80 characters; contains 81 characters" source="Generic.Files.LineLength.TooLong"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\LoadWorkData.php">
+  <error line="33" column="188" severity="error" message="Line exceeds maximum limit of 120 characters; contains 187 characters" source="Generic.Files.LineLength.MaxExceeded"/>
+  <error line="43" column="270" severity="error" message="Line exceeds maximum limit of 120 characters; contains 269 characters" source="Generic.Files.LineLength.MaxExceeded"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\Room.php">
+  <error line="18" column="1" severity="warning" message="This comment is 44% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="28" column="6" severity="warning" message="This comment is 55% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="35" column="5" severity="warning" message="This comment is 59% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="36" column="1" severity="warning" message="Line exceeds 80 characters; contains 108 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="41" column="5" severity="warning" message="This comment is 62% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="42" column="1" severity="warning" message="Line exceeds 80 characters; contains 118 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="46" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="51" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="52" column="1" severity="warning" message="Line exceeds 80 characters; contains 82 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="56" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="61" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="66" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="71" column="5" severity="warning" message="This comment is 57% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="76" column="5" severity="warning" message="This comment is 57% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="114" column="5" severity="warning" message="This comment is 44% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomAdminController.php">
+  <error line="13" column="1" severity="warning" message="This comment is 48% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="42" column="35" severity="error" message="New objects must be assigned to a variable" source="Squiz.Objects.ObjectInstantiation.NotAssigned"/>
+  <error line="50" column="15" severity="error" message="Line indented incorrectly; expected 12 spaces, found 14" source="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
+  <error line="51" column="123" severity="error" message="Line exceeds maximum limit of 120 characters; contains 122 characters" source="Generic.Files.LineLength.MaxExceeded"/>
+  <error line="58" column="174" severity="error" message="Line exceeds maximum limit of 120 characters; contains 173 characters" source="Generic.Files.LineLength.MaxExceeded"/>
+  <error line="62" column="175" severity="error" message="Line exceeds maximum limit of 120 characters; contains 174 characters" source="Generic.Files.LineLength.MaxExceeded"/>
+  <error line="83" column="92" severity="warning" message="Line exceeds 80 characters; contains 91 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="85" column="92" severity="warning" message="Line exceeds 80 characters; contains 91 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="89" column="91" severity="warning" message="Line exceeds 80 characters; contains 90 characters" source="Generic.Files.LineLength.TooLong"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomTest.php">
+  <error line="115" column="9" severity="warning" message="This comment is 68% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomType.php">
+  <error line="35" column="12" severity="warning" message="The method parameter $options is never used" source="Generic.CodeAnalysis.UnusedFunctionParameter.Found"/>
+  <error line="37" column="227" severity="error" message="Line exceeds maximum limit of 120 characters; contains 226 characters" source="Generic.Files.LineLength.MaxExceeded"/>
+  <error line="38" column="86" severity="warning" message="Line exceeds 80 characters; contains 85 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="39" column="94" severity="warning" message="Line exceeds 80 characters; contains 93 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="40" column="95" severity="warning" message="Line exceeds 80 characters; contains 94 characters" source="Generic.Files.LineLength.TooLong"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWork.php">
+  <error line="18" column="1" severity="warning" message="This comment is 44% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="28" column="6" severity="warning" message="This comment is 55% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="35" column="5" severity="warning" message="This comment is 59% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="36" column="1" severity="warning" message="Line exceeds 80 characters; contains 111 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="41" column="5" severity="warning" message="This comment is 59% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="42" column="1" severity="warning" message="Line exceeds 80 characters; contains 111 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="47" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="52" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="57" column="5" severity="warning" message="This comment is 57% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="62" column="5" severity="warning" message="This comment is 57% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="100" column="5" severity="warning" message="This comment is 44% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWorkTest.php">
+  <error line="100" column="9" severity="warning" message="This comment is 68% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWorkType.php">
+  <error line="36" column="12" severity="warning" message="The method parameter $options is never used" source="Generic.CodeAnalysis.UnusedFunctionParameter.Found"/>
+  <error line="48" column="100" severity="warning" message="Line exceeds 80 characters; contains 99 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="49" column="100" severity="warning" message="Line exceeds 80 characters; contains 99 characters" source="Generic.Files.LineLength.TooLong"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\Work.php">
+  <error line="18" column="1" severity="warning" message="This comment is 44% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="28" column="6" severity="warning" message="This comment is 55% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="35" column="5" severity="warning" message="This comment is 62% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="36" column="1" severity="warning" message="Line exceeds 80 characters; contains 118 characters" source="Generic.Files.LineLength.TooLong"/>
+  <error line="40" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="45" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="50" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="55" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="60" column="5" severity="warning" message="This comment is 58% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="65" column="5" severity="warning" message="This comment is 57% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="70" column="5" severity="warning" message="This comment is 57% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+  <error line="109" column="5" severity="warning" message="This comment is 44% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+ </file>
+ <file name="C:\wamp\www\SCGB\Symfony\src\main\java\WorkTest.php">
+  <error line="108" column="9" severity="warning" message="This comment is 68% valid code; is this commented out code?" source="Squiz.PHP.CommentedOutCode.Found"/>
+ </file>
+</checkstyle>

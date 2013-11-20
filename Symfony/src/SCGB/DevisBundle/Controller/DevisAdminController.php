@@ -24,35 +24,35 @@ use SCGB\DevisBundle\Form\DevisType;
 */
 class DevisAdminController extends Controller
 {
-	/**
+    /**
     * Default action to add new
     *
     * @return (object) kernel response
     */
-	public function newAction()
-	{
-		$devis = new Devis();
-		$form = $this->createForm(new DevisType(), $devis);
-		$form->setData($devis);
+    public function newAction()
+    {
+        $devis = new Devis();
+        $form = $this->createForm(new DevisType(), $devis);
+        $form->setData($devis);
 
-		$request = $this->get('request');
+        $request = $this->get('request');
 
-		if ($request->getMethod() == 'POST') {
-			  $form->bind($request);
+        if ($request->getMethod() == 'POST') {
+            $form->bind($request);
 
-			  if ($form->isValid()) {
-				$em = $this->getDoctrine()->getManager();
-				$em->persist($devis);
-				$em->flush();
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($devis);
+                $em->flush();
 
-				return $this->redirect($this->generateUrl('devis_update', array('id' => $devis->getId())));
-			  }
-		}
+                return $this->redirect($this->generateUrl('devis_list', array('id' => $devis->getId())));
+            }
+        }
 
-		return $this->render('SCGBDevisBundle:DevisAdmin:new.html.twig', array('form' => $form->createView(),));
-	}
+        return $this->render('SCGBDevisBundle:DevisAdmin:new.html.twig', array('form' => $form->createView(),));
+    }
 
-	/**
+    /**
     * Update an entity
     * @param (integer) $id id of the entity to update
     *
@@ -67,29 +67,29 @@ class DevisAdminController extends Controller
             throw $this->createNotFoundException('No entity found for id '.$id);
         }
 
-		$form = $this->createForm(new DevisType(), $entity);
-		$form->setData($entity);
+        $form = $this->createForm(new DevisType(), $entity);
+        $form->setData($entity);
 
 
-		$request = $this->get('request');
+        $request = $this->get('request');
 
-		if ($request->getMethod() == 'POST') {
-			  $form->bind($request);
+        if ($request->getMethod() == 'POST') {
+            $form->bind($request);
 
-			  if ($form->isValid()) {
-				$em = $this->getDoctrine()->getManager();
-				$em->persist($entity);
-				$em->flush();
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($entity);
+                $em->flush();
 
-				return $this->redirect($this->generateUrl('devis_list', array('id' => $entity->getId())));
-			  }
-		}
+                return $this->redirect($this->generateUrl('devis_list', array('id' => $entity->getId())));
+            }
+        }
 
-		return $this->render('SCGBDevisBundle:DevisAdmin:new.html.twig', array('form' => $form->createView(),'entity' => $entity));
+        return $this->render('SCGBDevisBundle:DevisAdmin:new.html.twig', array('form' => $form->createView(),'entity' => $entity, 'id' => $entity->getId()));
 
     }
 
-	/**
+    /**
     * List an entity
     * @param (integer) $id id of the entity to list
     *
@@ -103,19 +103,23 @@ class DevisAdminController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('No entity found for id '.$id);
         }
-		$newcost = 0;
-		foreach ($entity->getRooms() as $room) {
-			$newcost += $room->getTotalWorkAmount();
+        $newcost = 0;
+        foreach ($entity->getRooms() as $room) {
+            $newcost += $room->getTotalWorkAmount();
         }
-		$entity->setGlobalAmount($newcost);
+        $entity->setGlobalAmount($newcost);
 
-		$request = $this->get('request');
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($entity);
+        $em->flush();
 
-		return $this->render('SCGBDevisBundle:DevisAdmin:list.html.twig', array('entity' => $entity));
+        $request = $this->get('request');
+
+        return $this->render('SCGBDevisBundle:DevisAdmin:list.html.twig', array('entity' => $entity, 'id' => $entity->getId()));
 
     }
 
-	/**
+    /**
     * Find an entity
     * @param (integer) $id id of the entity to list
     *
@@ -123,26 +127,67 @@ class DevisAdminController extends Controller
     */
     public function findAction()
     {
+        $enteredValue = '&';
         $request = $this->get('request');
-        $em = $this->getDoctrine()->getManager();        
+        $em = $this->getDoctrine()->getManager();
 
-		if ($request->getMethod() == 'POST') {
-			$entity = $em->getRepository('SCGBDevisBundle:Devis')->find($id);
-			if (!$entity) {
-				throw $this->createNotFoundException('No entity found for id '.$id);
-			}
-			  $form->bind($request);
+        $form = $this->createFormBuilder()
+            ->add('identifiant', 'integer')
+            ->add('Valider', 'submit')
+            ->getForm();
 
-			  if ($form->isValid()) {
-				$em = $this->getDoctrine()->getManager();
-				$em->persist($entity);
-				$em->flush();
+        $form->handleRequest($request);
 
-				return $this->redirect($this->generateUrl('devis_list', array('id' => $entity->getId())));
-			  }
-		}
+        if ($request->getMethod() == 'POST') {
+            $data = $form->getData();
+            $entity = $em->getRepository('SCGBDevisBundle:Devis')->find($data['identifiant']);
+            if ($entity) {
+                return $this->redirect($this->generateUrl('devis_list', array('id' => $entity->getId())));
+            }
+            $fail = 1;
+            $enteredValue = $data['identifiant'];
+        }
 
-		return $this->render('SCGBDevisBundle:DevisAdmin:find.html.twig');
+        return $this->render('SCGBDevisBundle:DevisAdmin:find.html.twig', array('form' => $form->createView(), 'fail' => $fail, 'enteredValue' => $enteredValue  ));
+
+    }
+
+    /**
+    * Save an entity
+    * @param (integer) $id id of the entity to list
+    *
+    * @return show the property list in html format
+    */
+    public function saveAction($id)
+    {
+
+        $request = $this->get('request');
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository('SCGBDevisBundle:Devis')->find($id);
+        if (!$entity) {
+            throw $this->createNotFoundException('No entity found for id '.$id);
+        }
+
+        return $this->render('SCGBDevisBundle:DevisAdmin:save.html.twig', array('entity' => $entity, 'id' => $entity->getId()));
+
+    }
+    
+    /**
+    * Save an entity
+    * @param (integer) $id id of the entity to list
+    *
+    * @return show the property list in html format
+    */
+    public function sendAction($id)
+    {
+        $request = $this->get('request');
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository('SCGBDevisBundle:Devis')->find($id);
+        if (!$entity) {
+            throw $this->createNotFoundException('No entity found for id '.$id);
+        }
+
+        return $this->render('SCGBDevisBundle:DevisAdmin:send.html.twig', array('entity' => $entity, 'id' => $entity->getId()));
 
     }
 

@@ -31,29 +31,29 @@ class RoomWork
      * @ORM\Id()
      */
     protected $id;
-	
-	/**
+
+    /**
      * @ORM\ManyToOne(targetEntity="SCGB\DevisBundle\Entity\Room", inversedBy="roomWorks", cascade={"persist"})
      * @ORM\JoinColumn(name="room_id", referencedColumnName="id")
      */
     private $room;
-	
-	/**
+
+    /**
      * @ORM\ManyToOne(targetEntity="SCGB\DevisBundle\Entity\Work", inversedBy="roomWorks", cascade={"persist"})
      * @ORM\JoinColumn(name="work_id", referencedColumnName="id")
      */
     private $work;
-	
-	/**
+
+    /**
      * @ORM\Column(name="quantity", type="smallint", nullable=true)
      */
     protected $quantity;
-	
-	/**
+
+    /**
      * @ORM\Column(name="comment", type="text", nullable=true)
      */
     private $comment;
-	
+
     /**
      * @ORM\Column(name="created_at", type="datetime")
      */
@@ -111,8 +111,8 @@ class RoomWork
 
         $this->updatedAt = new \DateTime();
     }
-	
-	  /**
+
+    /**
      * Set work
      *
      * @param \SCGB\DevisBundle\Entity\Work $work
@@ -135,8 +135,8 @@ class RoomWork
     {
         return $this->work;
     }
-	
-	 /**
+
+    /**
      * Set room
      *
      * @param \SCGB\DevisBundle\Entity\Room $room
@@ -159,8 +159,8 @@ class RoomWork
     {
         return $this->room;
     }
-	
-	/**
+
+    /**
      * Set quantity
      *
      * @param integer $quantity
@@ -193,8 +193,8 @@ class RoomWork
     {
         $this->id = $id;
     }
-	
-	 /**
+
+    /**
      * Set comment
      *
      * @param string $comment
@@ -282,12 +282,9 @@ class RoomWork
     * @return boolean
     */
     public function isDeletable()
-    {
-        if (count($this->logs) == 0) {
-            return true;
-        }
+    {        
 
-        return false;
+        return true;
     }
 
 }

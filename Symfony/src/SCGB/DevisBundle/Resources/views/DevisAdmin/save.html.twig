@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Mon devis en ligne{% endblock %}
+{% set language = 'fr' %}
+
+
+{% block body %}
+<div id="bottom" class="row-fluid ">
+		<div class="space_box white_box">
+			<h1 class="text_blue title text-left " > Sauvegarder un devis <a href="{{ path('devis_list', {'id':entity.id}) }}" class="btn pull-right" id="return_room">Retour</a></h1>
+
+            <div class="form-horizontal form-padding">
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Votre devis a été sauvegardé.</br> Il vous sera possible de le poursuivre dans Devis en ligne et en cliquant sur "Récupérer un devis" puis en renseignant 
+                    l'identifiant suivant : {{ entity.id }}</strong>
+                </div>
+               
+                
+
+            </div>
+
+		</div>
+</div>
+{% endblock %}

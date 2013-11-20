@@ -32,7 +32,7 @@ class Devis
      */
     protected $id;
 
-	/**
+    /**
      * @ORM\OneToMany(targetEntity="SCGB\DevisBundle\Entity\Room", mappedBy="devis", cascade={"persist", "remove"})
      */
     protected $rooms;
@@ -42,7 +42,7 @@ class Devis
      */
     private $globalAmount;
 
-	/**
+    /**
      * @ORM\Column(name="totalTime", type="decimal", scale=2, nullable=true)
      */
     private $totalTime;
@@ -105,8 +105,8 @@ class Devis
 
         $this->updatedAt = new \DateTime();
     }
-	
-	 /**
+
+    /**
      * Add Room
      *
      * @param \SCGB\DevisBundle\Entity\Room $room

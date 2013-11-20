@@ -3,20 +3,23 @@
 {% block title %}Mon devis en ligne{% endblock %}
 {% set language = 'fr' %}
 
+
 {% block body %}
+{% include 'SCGBDevisBundle:NavigationAdmin:list.html.twig' %}
+
 <div id="bottom" class="row-fluid ">
 		<div class="space_box white_box">
 			<h1 class="text_blue title text-left " > Etablir un devis <a href="{{ path('devis_get_back') }}" class="btn-large btn pull-right" id="find_devis">Récupérer un ancien devis</a></h1>
-			 
+
 			<div class="entity-form spacer">
 				<form method="post" {{ form_enctype(form) }}>
-					<div class="form-horizontal form-padding">						
+					<div class="form-horizontal form-padding">
 						<legend>Saisissez vos travaux :</legend>
 						<div class="alert alert-warn">
 							<button type="button" class="close" data-dismiss="alert">&times;</button>
 							<strong>Info sur le service :</strong> La validation du devis est obligatoire par une visite sur place qui sera payante ( prix forfaitaire ) si la commande n'est pas validée.
 						</div>
-						<span class="row">						
+						<span class="row">
 							<span id="sub-form" class="span12">
 								<fieldset>
 									<div class="space" style="margin-bottom:10px;">
@@ -45,8 +48,8 @@
 								</fieldset>
 							</span>
 						</span>
-						
-						{{ form_rest(form) }} 
+
+						{{ form_rest(form) }}
 						{{ form_errors(form) }}
 						<div class="alert alert-info">
 							<button type="button" class="close" data-dismiss="alert">&times;</button>

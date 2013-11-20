@@ -3,17 +3,29 @@ devis_new:
     pattern:  /devis/new
     defaults: { _controller: SCGBDevisBundle:DevisAdmin:new }
 
+devis_save:
+    pattern:  /devis/{id}/save
+    defaults: { _controller: SCGBDevisBundle:DevisAdmin:save }
+
 devis_update:
     pattern:  /devis/{id}/update
     defaults: { _controller: SCGBDevisBundle:DevisAdmin:update }
 
 devis_list:
-    pattern:  /devis/{id}/list/
+    pattern:  /devis/{id}/list
     defaults: { _controller: SCGBDevisBundle:DevisAdmin:list }
+
+devis_send:
+    pattern:  /devis/{id}/send
+    defaults: { _controller: SCGBDevisBundle:DevisAdmin:send }
 
 room_remove:
     pattern:  /devis/room/remove/{id}
     defaults: { _controller: SCGBDevisBundle:RoomAdmin:remove }
+
+work_remove:
+    pattern:  /devis/room/{id}/work/remove/{idWork}
+    defaults: { _controller: SCGBDevisBundle:RoomAdmin:removeWork }
 
 room_add_work:
     pattern:  /devis/room/{id}/add-work

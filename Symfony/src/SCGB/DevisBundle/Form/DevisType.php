@@ -36,21 +36,21 @@ class DevisType extends AbstractType
     {
         // $builder->add('globalAmount', 'text', array('label'  => 'Global Amount', 'required'  => true));
         // $builder->add('totalTime', 'text', array('label'  => 'Total Time', 'required'  => true));
-		$builder->addEventListener(FormEvents::PRE_SET_DATA, function(FormEvent $event) use ($builder) {
-			$data = $event->getData();
-			$event->getForm()->add($builder->getFormFactory()
-							 ->createNamed('rooms', 'collection', null, 
-						array(
-							'label' => ' ',
-							'type' => new RoomType(),
-							'allow_add' => true,
-							'by_reference' => false,
-							'allow_delete' => true,
-							'auto_initialize' => false,
-							'options' => array(
-								'data_class' => 'SCGB\DevisBundle\Entity\Room')
-						)));
-		});
+        $builder->addEventListener(FormEvents::PRE_SET_DATA, function(FormEvent $event) use ($builder) {
+            $data = $event->getData();
+            $event->getForm()->add($builder->getFormFactory()
+                             ->createNamed('rooms', 'collection', null, 
+                        array(
+                            'label' => ' ',
+                            'type' => new RoomType(),
+                            'allow_add' => true,
+                            'by_reference' => false,
+                            'allow_delete' => true,
+                            'auto_initialize' => false,
+                            'options' => array(
+                                'data_class' => 'SCGB\DevisBundle\Entity\Room')
+                        )));
+        });
     }
 
 

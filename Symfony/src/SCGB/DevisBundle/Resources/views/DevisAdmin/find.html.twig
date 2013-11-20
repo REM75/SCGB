@@ -5,11 +5,33 @@
 
 
 {% block body %}
+{% set new = 1 %}
+{% include 'SCGBDevisBundle:NavigationAdmin:list.html.twig' %}
 <div id="bottom" class="row-fluid ">
 		<div class="space_box white_box">
 			<h1 class="text_blue title text-left " > Récupérer un ancien devis</h1>
-			
-			
+
+            <div class="form-horizontal form-padding">
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Renseigner votre identifiant de devis :</strong>
+                </div>
+                <form method="post" {{ form_enctype(form) }}>
+                    {{ form_widget(form.identifiant) }}
+                    {{ form_widget(form.Valider, { 'attr': {'class': 'btn btn-primary'} }) }}
+                    {{ form_rest(form) }}
+                    {{ form_errors(form) }}
+                </form>
+                
+                {% if fail is defined %}
+                    <div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        Il n'y a pas de devis équivalant à l'identifiant <strong>{{ enteredValue }}.</strong>
+                    </div>
+                {% endif %}
+
+            </div>
+
 		</div>
 </div>
 {% endblock %}

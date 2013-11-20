@@ -1,0 +1,3 @@
+INSERT INTO `work` (`id`, `reference`, `description`, `duration`, `numberofPeoplemin`, `created_at`, `updated_at`, `unit_cost`) VALUES
+(1, 'Peinture support prêt', 'Le mur est lisse et préparé.Protection des surfaces, ponçage ou lessivage des murs. Inclut une sous couche et si nécessaire deux couches de peinture.', '0.00', 1, '2013-11-13 13:26:10', '2013-11-13 13:26:10', '10.00'),
+(2, 'Peinture + préparation du support', 'Support partiellement dégradé. Rebouchage et mastiquage des irrégularités. Passage d''un enduit de lissage. Protection des surfaces, ponçage ou lessivage des murs. Inclut une sous couche et si nécessaire deux couches de peinture.', '0.00', 1, '2013-11-13 13:26:10', '2013-11-13 13:26:10', '15.00');

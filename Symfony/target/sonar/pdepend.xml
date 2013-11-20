@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metrics generated="2013-11-20T09:35:29" pdepend="1.1.0" ahh="1.25" andc="0" calls="295" ccn="135" ccn2="135" cloc="970" clsa="0" clsc="21" eloc="1036" fanout="61" leafs="16" lloc="677" loc="2392" maxDIT="2" ncloc="1422" noc="21" nof="0" noi="0" nom="115" nop="6" roots="5">
+  <files>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisAdminController.php" cloc="35" eloc="84" lloc="62" loc="150" ncloc="115"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomAdminController.php" cloc="23" eloc="54" lloc="39" loc="93" ncloc="70"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisAdminControllerTest.php" cloc="61" eloc="26" lloc="16" loc="101" ncloc="40"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisRepository.php" cloc="13" eloc="6" lloc="2" loc="26" ncloc="13"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\Room.php" cloc="196" eloc="137" lloc="80" loc="387" ncloc="191"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomRepository.php" cloc="13" eloc="6" lloc="2" loc="26" ncloc="13"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWork.php" cloc="147" eloc="104" lloc="60" loc="293" ncloc="146"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWorkRepository.php" cloc="13" eloc="6" lloc="2" loc="26" ncloc="13"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\Work.php" cloc="180" eloc="130" lloc="76" loc="361" ncloc="181"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\WorkRepository.php" cloc="13" eloc="12" lloc="5" loc="31" ncloc="18"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisTest.php" cloc="30" eloc="57" lloc="43" loc="106" ncloc="76"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomTest.php" cloc="30" eloc="69" lloc="55" loc="122" ncloc="92"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWorkTest.php" cloc="30" eloc="58" lloc="44" loc="107" ncloc="77"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\WorkTest.php" cloc="30" eloc="63" lloc="49" loc="115" ncloc="85"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisType.php" cloc="24" eloc="33" lloc="14" loc="68" ncloc="44"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomType.php" cloc="26" eloc="28" lloc="16" loc="65" ncloc="39"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWorkType.php" cloc="26" eloc="37" lloc="18" loc="75" ncloc="49"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\LoadDevisData.php" cloc="20" eloc="27" lloc="19" loc="54" ncloc="34"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\LoadRoomData.php" cloc="20" eloc="43" lloc="35" loc="74" ncloc="54"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\LoadRoomWorkData.php" cloc="20" eloc="23" lloc="15" loc="50" ncloc="30"/>
+    <file name="C:\wamp\www\SCGB\Symfony\src\main\java\LoadWorkData.php" cloc="20" eloc="33" lloc="25" loc="62" ncloc="42"/>
+  </files>
+  <package name="SCGB\DevisBundle\Controller" cr="0.15" noc="2" nof="0" noi="0" nom="6" rcr="0.2775">
+    <class name="DevisAdminController" ca="0" cbo="3" ce="3" cis="4" cloc="23" cr="0.15" csz="4" dit="2" eloc="70" impl="0" lloc="52" loc="125" ncloc="102" noam="4" nocc="0" nom="4" noom="0" npm="4" rcr="0.21375" vars="0" varsi="0" varsnp="0" wmc="14" wmci="14" wmcnp="14">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisAdminController.php"/>
+      <method name="newAction" ccn="3" ccn2="3" cloc="0" eloc="16" lloc="12" loc="22" ncloc="22" npath="3"/>
+      <method name="updateAction" ccn="4" ccn2="4" cloc="0" eloc="21" lloc="16" loc="30" ncloc="30" npath="6"/>
+      <method name="listAction" ccn="3" ccn2="3" cloc="0" eloc="15" lloc="11" loc="19" ncloc="19" npath="4"/>
+      <method name="findAction" ccn="4" ccn2="4" cloc="0" eloc="18" lloc="13" loc="24" ncloc="24" npath="5"/>
+    </class>
+    <class name="RoomAdminController" ca="0" cbo="2" ce="2" cis="2" cloc="11" cr="0.15" csz="2" dit="2" eloc="42" impl="0" lloc="31" loc="68" ncloc="57" noam="2" nocc="0" nom="2" noom="0" npm="2" rcr="0.21375" vars="0" varsi="0" varsnp="0" wmc="7" wmci="7" wmcnp="7">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomAdminController.php"/>
+      <method name="addWorkAction" ccn="4" ccn2="4" cloc="0" eloc="25" lloc="20" loc="32" ncloc="32" npath="6"/>
+      <method name="removeAction" ccn="3" ccn2="3" cloc="0" eloc="17" lloc="11" loc="20" ncloc="20" npath="4"/>
+    </class>
+  </package>
+  <package name="SCGB\DevisBundle\Tests\Controller" cr="0.15" noc="1" nof="0" noi="0" nom="3" rcr="0.1755">
+    <class name="DevisAdminControllerTest" ca="0" cbo="0" ce="0" cis="3" cloc="51" cr="0.15" csz="3" dit="2" eloc="17" impl="0" lloc="11" loc="83" ncloc="32" noam="3" nocc="0" nom="3" noom="0" npm="3" rcr="0.1755" vars="0" varsi="0" varsnp="0" wmc="3" wmci="3" wmcnp="3">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisAdminControllerTest.php"/>
+      <method name="setup" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="6" ncloc="6" npath="1"/>
+      <method name="testList" ccn="1" ccn2="1" cloc="0" eloc="10" lloc="8" loc="15" ncloc="15" npath="1"/>
+      <method name="testNewAndRemove" ccn="1" ccn2="1" cloc="42" eloc="2" lloc="0" loc="47" ncloc="5" npath="1"/>
+    </class>
+  </package>
+  <package name="SCGB\DevisBundle\Entity" cr="0.15" noc="7" nof="0" noi="0" nom="70" rcr="0.2775">
+    <class name="DevisRepository" ca="0" cbo="0" ce="0" cis="0" cloc="0" cr="0.15" csz="0" dit="2" eloc="0" impl="0" lloc="0" loc="5" ncloc="5" noam="0" nocc="0" nom="0" noom="0" npm="0" rcr="0.181875" vars="0" varsi="0" varsnp="0" wmc="0" wmci="0" wmcnp="0">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisRepository.php"/>
+    </class>
+    <class name="Room" ca="5" cbo="11" ce="11" cis="26" cloc="181" cr="0.15" csz="36" dit="0" eloc="93" impl="0" lloc="40" loc="362" ncloc="181" noam="0" nocc="0" nom="26" noom="0" npm="26" rcr="0.15" vars="10" varsi="10" varsnp="0" wmc="27" wmci="27" wmcnp="27">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\Room.php"/>
+      <method name="__toString" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="get" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="preUpdate" ccn="2" ccn2="2" cloc="0" eloc="6" lloc="3" loc="8" ncloc="8" npath="2"/>
+      <method name="addRoomWork" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="7" ncloc="7" npath="1"/>
+      <method name="removeRoomWork" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="getRoomWorks" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setName" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getName" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setCategory" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getCategory" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setDevis" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getDevis" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setTotalWorkAmount" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getTotalWorkAmount" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setSize" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getSize" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setWidth" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getWidth" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setId" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="getId" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setCreatedAt" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getCreatedAt" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setUpdatedAt" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getUpdatedAt" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="isDeletable" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="5" ncloc="5" npath="1"/>
+    </class>
+    <class name="RoomRepository" ca="0" cbo="0" ce="0" cis="0" cloc="0" cr="0.15" csz="0" dit="2" eloc="0" impl="0" lloc="0" loc="5" ncloc="5" noam="0" nocc="0" nom="0" noom="0" npm="0" rcr="0.181875" vars="0" varsi="0" varsnp="0" wmc="0" wmci="0" wmcnp="0">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomRepository.php"/>
+    </class>
+    <class name="RoomWork" ca="7" cbo="5" ce="5" cis="19" cloc="132" cr="0.15" csz="26" dit="0" eloc="70" impl="0" lloc="30" loc="268" ncloc="136" noam="0" nocc="0" nom="19" noom="0" npm="19" rcr="0.15" vars="7" varsi="7" varsnp="0" wmc="21" wmci="21" wmcnp="21">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWork.php"/>
+      <method name="__toString" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="2" lloc="0" loc="4" ncloc="4" npath="1"/>
+      <method name="get" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="preUpdate" ccn="2" ccn2="2" cloc="0" eloc="6" lloc="3" loc="8" ncloc="8" npath="2"/>
+      <method name="setWork" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getWork" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setRoom" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getRoom" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setQuantity" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getQuantity" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setId" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setComment" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getComment" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="getId" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setCreatedAt" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getCreatedAt" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setUpdatedAt" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getUpdatedAt" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="isDeletable" ccn="2" ccn2="2" cloc="0" eloc="6" lloc="3" loc="8" ncloc="8" npath="2"/>
+    </class>
+    <class name="RoomWorkRepository" ca="0" cbo="0" ce="0" cis="0" cloc="0" cr="0.15" csz="0" dit="2" eloc="0" impl="0" lloc="0" loc="5" ncloc="5" noam="0" nocc="0" nom="0" noom="0" npm="0" rcr="0.181875" vars="0" varsi="0" varsnp="0" wmc="0" wmci="0" wmcnp="0">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWorkRepository.php"/>
+    </class>
+    <class name="Work" ca="5" cbo="6" ce="6" cis="24" cloc="165" cr="0.15" csz="33" dit="0" eloc="89" impl="0" lloc="39" loc="336" ncloc="171" noam="0" nocc="0" nom="24" noom="0" npm="24" rcr="0.15" vars="9" varsi="9" varsnp="0" wmc="26" wmci="26" wmcnp="26">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\Work.php"/>
+      <method name="__toString" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="5" ncloc="5" npath="1"/>
+      <method name="get" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="preUpdate" ccn="2" ccn2="2" cloc="0" eloc="6" lloc="3" loc="8" ncloc="8" npath="2"/>
+      <method name="addRoomWork" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="7" ncloc="7" npath="1"/>
+      <method name="removeRoomWork" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="getRoomWorks" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setDuration" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getDuration" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setUnitCost" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getUnitCost" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setReference" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getReference" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setDescription" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getDescription" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setNumberofPeoplemin" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getnumberofPeoplemin" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setId" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="getId" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setCreatedAt" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getCreatedAt" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="setUpdatedAt" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="6" ncloc="6" npath="1"/>
+      <method name="getUpdatedAt" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+      <method name="isDeletable" ccn="2" ccn2="2" cloc="0" eloc="6" lloc="3" loc="8" ncloc="8" npath="2"/>
+    </class>
+    <class name="WorkRepository" ca="1" cbo="0" ce="0" cis="1" cloc="0" cr="0.15" csz="1" dit="2" eloc="5" impl="0" lloc="2" loc="10" ncloc="10" noam="1" nocc="0" nom="1" noom="0" npm="1" rcr="0.181875" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\WorkRepository.php"/>
+      <method name="getQuerySelectType" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="2" loc="6" ncloc="6" npath="1"/>
+    </class>
+  </package>
+  <package name="SCGB\DevisBundle\Tests\Entity" cr="0.15" noc="4" nof="0" noi="0" nom="20" rcr="0.252">
+    <class name="DevisTest" ca="0" cbo="3" ce="3" cis="5" cloc="20" cr="0.15" csz="6" dit="2" eloc="41" impl="0" lloc="31" loc="84" ncloc="64" noam="5" nocc="0" nom="5" noom="0" npm="5" rcr="0.1755" vars="1" varsi="1" varsnp="0" wmc="5" wmci="5" wmcnp="5">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisTest.php"/>
+      <method name="setUp" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="6" ncloc="6" npath="1"/>
+      <method name="tearDown" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="5" ncloc="5" npath="1"/>
+      <method name="testSetGet" ccn="1" ccn2="1" cloc="0" eloc="25" lloc="23" loc="35" ncloc="35" npath="1"/>
+      <method name="testGetAll" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="6" ncloc="6" npath="1"/>
+      <method name="testFindById" ccn="1" ccn2="1" cloc="5" eloc="2" lloc="0" loc="8" ncloc="3" npath="1"/>
+    </class>
+    <class name="RoomTest" ca="0" cbo="4" ce="4" cis="5" cloc="20" cr="0.15" csz="6" dit="2" eloc="53" impl="0" lloc="43" loc="100" ncloc="80" noam="5" nocc="0" nom="5" noom="0" npm="5" rcr="0.1755" vars="1" varsi="1" varsnp="0" wmc="5" wmci="5" wmcnp="5">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomTest.php"/>
+      <method name="setUp" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="6" ncloc="6" npath="1"/>
+      <method name="tearDown" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="5" ncloc="5" npath="1"/>
+      <method name="testSetGet" ccn="1" ccn2="1" cloc="0" eloc="37" lloc="35" loc="51" ncloc="51" npath="1"/>
+      <method name="testGetAll" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="6" ncloc="6" npath="1"/>
+      <method name="testFindById" ccn="1" ccn2="1" cloc="5" eloc="2" lloc="0" loc="8" ncloc="3" npath="1"/>
+    </class>
+    <class name="RoomWorkTest" ca="0" cbo="4" ce="4" cis="5" cloc="20" cr="0.15" csz="6" dit="2" eloc="42" impl="0" lloc="32" loc="85" ncloc="65" noam="5" nocc="0" nom="5" noom="0" npm="5" rcr="0.1755" vars="1" varsi="1" varsnp="0" wmc="5" wmci="5" wmcnp="5">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWorkTest.php"/>
+      <method name="setUp" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="6" ncloc="6" npath="1"/>
+      <method name="tearDown" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="5" ncloc="5" npath="1"/>
+      <method name="testSetGet" ccn="1" ccn2="1" cloc="0" eloc="26" lloc="24" loc="36" ncloc="36" npath="1"/>
+      <method name="testGetAll" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="6" ncloc="6" npath="1"/>
+      <method name="testFindById" ccn="1" ccn2="1" cloc="5" eloc="2" lloc="0" loc="8" ncloc="3" npath="1"/>
+    </class>
+    <class name="WorkTest" ca="0" cbo="3" ce="3" cis="5" cloc="20" cr="0.15" csz="6" dit="2" eloc="47" impl="0" lloc="37" loc="93" ncloc="73" noam="5" nocc="0" nom="5" noom="0" npm="5" rcr="0.1755" vars="1" varsi="1" varsnp="0" wmc="5" wmci="5" wmcnp="5">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\WorkTest.php"/>
+      <method name="setUp" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="6" ncloc="6" npath="1"/>
+      <method name="tearDown" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="5" ncloc="5" npath="1"/>
+      <method name="testSetGet" ccn="1" ccn2="1" cloc="0" eloc="31" lloc="29" loc="44" ncloc="44" npath="1"/>
+      <method name="testGetAll" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="6" ncloc="6" npath="1"/>
+      <method name="testFindById" ccn="1" ccn2="1" cloc="5" eloc="2" lloc="0" loc="8" ncloc="3" npath="1"/>
+    </class>
+  </package>
+  <package name="SCGB\DevisBundle\Form" cr="0.15" noc="3" nof="0" noi="0" nom="8" rcr="0.2775">
+    <class name="DevisType" ca="1" cbo="5" ce="5" cis="2" cloc="14" cr="0.15" csz="2" dit="2" eloc="20" impl="0" lloc="5" loc="43" ncloc="29" noam="2" nocc="0" nom="2" noom="0" npm="2" rcr="0.1925" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisType.php"/>
+      <method name="buildForm" ccn="1" ccn2="1" cloc="2" eloc="17" lloc="4" loc="20" ncloc="18" npath="1"/>
+      <method name="getName" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+    </class>
+    <class name="RoomType" ca="1" cbo="3" ce="3" cis="3" cloc="16" cr="0.15" csz="3" dit="2" eloc="14" impl="0" lloc="6" loc="40" ncloc="24" noam="3" nocc="0" nom="3" noom="0" npm="3" rcr="0.1925" vars="0" varsi="0" varsnp="0" wmc="3" wmci="3" wmcnp="3">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomType.php"/>
+      <method name="buildForm" ccn="1" ccn2="1" cloc="0" eloc="6" lloc="4" loc="7" ncloc="7" npath="1"/>
+      <method name="setDefaultOptions" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="1" loc="6" ncloc="6" npath="1"/>
+      <method name="getName" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+    </class>
+    <class name="RoomWorkType" ca="1" cbo="4" ce="4" cis="3" cloc="16" cr="0.15" csz="3" dit="2" eloc="22" impl="0" lloc="7" loc="49" ncloc="33" noam="3" nocc="0" nom="3" noom="0" npm="3" rcr="0.1925" vars="0" varsi="0" varsnp="0" wmc="3" wmci="3" wmcnp="3">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\RoomWorkType.php"/>
+      <method name="buildForm" ccn="1" ccn2="1" cloc="0" eloc="14" lloc="5" loc="16" ncloc="16" npath="1"/>
+      <method name="setDefaultOptions" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="1" loc="6" ncloc="6" npath="1"/>
+      <method name="getName" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="4" ncloc="4" npath="1"/>
+    </class>
+  </package>
+  <package name="SCGB\DevisBundle\DataFixtures\ORM" cr="0.15" noc="4" nof="0" noi="0" nom="8" rcr="0.2775">
+    <class name="LoadDevisData" ca="0" cbo="2" ce="2" cis="2" cloc="10" cr="0.15" csz="2" dit="2" eloc="16" impl="1" lloc="12" loc="33" ncloc="23" noam="2" nocc="0" nom="2" noom="0" npm="2" rcr="0.21375" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\LoadDevisData.php"/>
+      <method name="Load" ccn="1" ccn2="1" cloc="0" eloc="13" lloc="11" loc="16" ncloc="16" npath="1"/>
+      <method name="getOrder" ccn="1" ccn2="1" cloc="1" eloc="3" lloc="1" loc="4" ncloc="3" npath="1"/>
+    </class>
+    <class name="LoadRoomData" ca="0" cbo="2" ce="2" cis="2" cloc="10" cr="0.15" csz="2" dit="2" eloc="32" impl="1" lloc="28" loc="53" ncloc="43" noam="2" nocc="0" nom="2" noom="0" npm="2" rcr="0.21375" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\LoadRoomData.php"/>
+      <method name="Load" ccn="1" ccn2="1" cloc="0" eloc="29" lloc="27" loc="36" ncloc="36" npath="1"/>
+      <method name="getOrder" ccn="1" ccn2="1" cloc="1" eloc="3" lloc="1" loc="4" ncloc="3" npath="1"/>
+    </class>
+    <class name="LoadRoomWorkData" ca="0" cbo="2" ce="2" cis="2" cloc="10" cr="0.15" csz="2" dit="2" eloc="12" impl="1" lloc="8" loc="29" ncloc="19" noam="2" nocc="0" nom="2" noom="0" npm="2" rcr="0.21375" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\LoadRoomWorkData.php"/>
+      <method name="Load" ccn="1" ccn2="1" cloc="0" eloc="9" lloc="7" loc="12" ncloc="12" npath="1"/>
+      <method name="getOrder" ccn="1" ccn2="1" cloc="1" eloc="3" lloc="1" loc="4" ncloc="3" npath="1"/>
+    </class>
+    <class name="LoadWorkData" ca="0" cbo="2" ce="2" cis="2" cloc="10" cr="0.15" csz="2" dit="2" eloc="22" impl="1" lloc="18" loc="41" ncloc="31" noam="2" nocc="0" nom="2" noom="0" npm="2" rcr="0.21375" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\wamp\www\SCGB\Symfony\src\main\java\LoadWorkData.php"/>
+      <method name="Load" ccn="1" ccn2="1" cloc="0" eloc="19" lloc="17" loc="24" ncloc="24" npath="1"/>
+      <method name="getOrder" ccn="1" ccn2="1" cloc="1" eloc="3" lloc="1" loc="4" ncloc="3" npath="1"/>
+    </class>
+  </package>
+</metrics>

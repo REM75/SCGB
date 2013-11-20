@@ -102,6 +102,11 @@ a{
     border-bottom: 1px #b3b6b9 solid;
     line-height: 100%;
 }
+.title_without_border {
+    padding-top:10px;
+    font-family:'HelveticaNeueW01-UltLt';
+    font-size: 40px;
+}
 .download_link {
 	padding-left: 30px;
     background: url(../img/fleche_donwload.png) no-repeat left;

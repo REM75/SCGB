@@ -1,0 +1,10 @@
+
+
+<div id="bottom" class="row-fluid ">
+    <div class="space_box white_box">
+       <h1 class="text_blue title_without_border text-left " > Menu : 
+       <a href="{% if new is not defined %}#{% else %}{{ path('devis_new') }}{% endif %}" class="btn-large btn {% if new is not defined %}btn-inverse{% endif %}" ><i class="fa fa-file-text"></i> Créer un nouveau devis</a>	 
+       <a href="{% if send is not defined %}#{% else %}{{ path('devis_send', {'id':id}) }}{% endif %}" class="btn-large btn {% if send is not defined %}btn-inverse{% endif %}" ><i class="fa fa-envelope"></i> Soumettre votre devis</a>
+       <a href="{% if save is not defined %}#{% else %}{{ path('devis_save', {'id':id}) }}{% endif %}" class="btn-large btn {% if save is not defined %}btn-inverse{% endif %} pull-right" ><i class="fa fa-save"></i> Sauvegarder</a> </h1>
+    </div>
+</div>

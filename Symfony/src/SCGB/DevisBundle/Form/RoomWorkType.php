@@ -35,12 +35,7 @@ class RoomWorkType extends AbstractType
     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-		/*$builder->add('work', 'entity', array('label' => 'Travail',
-		  'class'    => 'SCGBDevisBundle:Work',
-		  'property' => 'reference',
-		  'multiple' => true)
-		);*/
-		$builder->add('work', 'entity',
+        $builder->add('work', 'entity',
             array( 'label' => 'Travail',
                 'class' => 'SCGBDevisBundle:Work',
                 'property' => 'reference',
@@ -55,7 +50,7 @@ class RoomWorkType extends AbstractType
 
     }
 
-	/**
+    /**
     * setDefaultOptions
     * @param OptionsResolverInterface $resolver
     */

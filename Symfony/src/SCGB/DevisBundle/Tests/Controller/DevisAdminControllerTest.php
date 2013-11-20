@@ -51,7 +51,7 @@ class DevisAdminControllerTest extends WebTestCase
     */
     public function testNewAndRemove()
     {
-		/*
+        /*
         $crawler = $this->client->request('GET', '/admin/supply/new');
         $this->assertTrue($crawler->filter('html:contains("Create a new supply")')->count() > 0);
 

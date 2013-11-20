@@ -62,12 +62,12 @@ class RoomTest extends WebTestCase
         $data = new \DateTime();
         $room->preUpdate();
         $this->assertEquals($data, $room->getUpdatedAt());
-        $room->setUpdatedAt($data);		
-		
+        $room->setUpdatedAt($data);
+
         $data = 'test';
         $room->setCategory($data);
         $this->assertEquals($data, $room->getCategory());
-		
+
         $data = 'test';
         $room->setName($data);
         $this->assertEquals($data, $room->getName());
@@ -75,19 +75,19 @@ class RoomTest extends WebTestCase
         $data = 3;
         $room->setTotalWorkAmount($data);
         $this->assertEquals($data, $room->getTotalWorkAmount());
-		
+
         $data = 3;
         $room->setSize($data);
         $this->assertEquals($data, $room->getSize());
-		
+
         $data = 3;
         $room->setWidth($data);
         $this->assertEquals($data, $room->getWidth());
-		
+
         $devis = new Devis();
-        $room->setDevis($devis);		
+        $room->setDevis($devis);
         $this->assertEquals($devis, $room->getDevis());
-		
+
         $roomWork = new RoomWork();
         $room->addRoomWork($roomWork);
         $this->assertEquals(1, count($room->getRoomWorks()));
@@ -99,7 +99,7 @@ class RoomTest extends WebTestCase
 
     /**
     * test testGetAll
-    */	
+    */
     public function testGetAll()
     {
         $manager = $this->em->getRepository('SCGBDevisBundle:Room');

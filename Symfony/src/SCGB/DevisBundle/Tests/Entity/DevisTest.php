@@ -71,7 +71,7 @@ class DevisTest extends WebTestCase
         $devis->preUpdate();
         $this->assertEquals($data, $devis->getUpdatedAt());
         $devis->setUpdatedAt($data);
-		
+
         $room = new Room();
         $devis->addRoom($room);
         $this->assertEquals(1, count($devis->getRooms()));

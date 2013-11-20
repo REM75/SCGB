@@ -33,14 +33,14 @@ class RoomType extends AbstractType
     * @return null
     */
     public function buildForm(FormBuilderInterface $builder, array $options)
-    {		
+    {
         $builder->add('category', 'choice', array('label'  => 'Catégorie ', 'choices'   => array('bath' => 'Salle de Bain', 'kitchen' => 'Cuisine', 'room' => 'Salon/Chambre', 'outside' => 'Extérieur'), 'required'  => true));
         $builder->add('name', 'text', array('label'  => 'Nom', 'required'  => true));
         $builder->add('size', 'text', array('label'  => 'Taile (m²)', 'required'  => true));
         $builder->add('width', 'text', array('label'  => 'Hauteur (m)', 'required'  => true));
     }
-	
-	/**
+
+    /**
     * setDefaultOptions
     * @param OptionsResolverInterface $resolver
     */

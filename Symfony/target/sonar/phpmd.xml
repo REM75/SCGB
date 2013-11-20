@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pmd version="1.4.1" timestamp="2013-11-20T09:35:34+00:00">
+  <file name="C:\wamp\www\SCGB\Symfony\src\main\java\DevisType.php">
+    <violation beginline="40" endline="40" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
+      Avoid unused local variables such as '$data'.
+    </violation>
+  </file>
+  <error filename="C:\wamp\www\SCGB\Symfony\src\main\java\Devis.php" msg="Unexpected token: SCGB, line: 12, col: 11, file: C:\wamp\www\SCGB\Symfony\src\main\java\Devis.php." />
+</pmd>

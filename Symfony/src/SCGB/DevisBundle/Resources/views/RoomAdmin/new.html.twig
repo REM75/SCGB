@@ -4,6 +4,9 @@
 {% set language = 'fr' %}
 
 {% block body %}
+{% set new = 1 %}
+{% set save = 1 %}
+{% include 'SCGBDevisBundle:NavigationAdmin:list.html.twig' %}
 <div id="bottom" class="row-fluid ">
 		<div class="space_box white_box">
 			<h1 class="text_blue title text-left " > Ma Pièce & Ses Travaux</h1>
@@ -11,7 +14,7 @@
 			<div class="entity-form spacer">
 				<form method="post" {{ form_enctype(form) }}>
 					<div class="form-horizontal form-padding">
-						<legend>Votre {{ entity.name }} <a href="{{ path('devis_get_back', {'id':devisId}) }}" class="btn pull-right" id="return_room">Retourner au récapitulatif des pièces</a></legend>	
+						<legend>Votre {{ entity.name }} <a href="{{ path('devis_list', {'id':id}) }}" class="btn pull-right" id="return_room">Retourner au récapitulatif des pièces</a></legend>	
 						<span class="row-fluid">
 							<span class="span3">
 								<ul class="unstyled">
@@ -46,7 +49,7 @@
 											$('#roomwork_work').change(function(){
 												$('#paint_01').css( "display", "none");
 												$('#paint_02').css( "display", "none");
-												if($(this).val() == 6) {
+												if($(this).val() == 1) {
 													$('#paint_01').css( "display", "block");
 												}
 												else {													

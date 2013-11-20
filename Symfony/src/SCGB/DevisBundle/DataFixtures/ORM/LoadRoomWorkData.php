@@ -27,12 +27,12 @@ class LoadRoomWorkData extends AbstractFixture implements OrderedFixtureInterfac
     */
     public function Load(ObjectManager $manager)
     {
-        $roomWork = new RoomWork();		
+        $roomWork = new RoomWork();
         $roomWork->setId(1);
         $roomWork->setQuantity(1);
         $roomWork->setComment('test');
-		
-        $this->addReference('roomWork-1', $roomWork);		
+
+        $this->addReference('roomWork-1', $roomWork);
         $manager->persist($roomWork);
 
         $manager->flush();

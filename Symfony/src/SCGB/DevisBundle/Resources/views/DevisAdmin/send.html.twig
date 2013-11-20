@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Mon devis en ligne{% endblock %}
+{% set language = 'fr' %}
+
+
+{% block body %}
+<div id="bottom" class="row-fluid ">
+		<div class="space_box white_box">
+			<h1 class="text_blue title text-left " > Sauvegarder un devis <a href="{{ path('devis_list', {'id':entity.id}) }}" class="btn pull-right" id="return_room">Retour</a></h1>
+
+            <div class="form-horizontal form-padding">
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Cette page n'a pas été encore développé. Le client n'a pas encore validé la solution proposée : </br>
+                    utiliser le formulaire existant de contact avec un champ caché contenant l'identifiant du devis effectué par le client.</strong>
+                </div>
+               
+                
+
+            </div>
+
+		</div>
+</div>
+{% endblock %}

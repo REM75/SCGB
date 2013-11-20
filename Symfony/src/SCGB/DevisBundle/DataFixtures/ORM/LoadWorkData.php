@@ -28,22 +28,22 @@ class LoadWorkData extends AbstractFixture implements OrderedFixtureInterface
     public function Load(ObjectManager $manager)
     {
         $work = new Work();	
-		$work->setId(1);		
+        $work->setId(1);		
         $work->setReference('Peinture support prêt');
         $work->setDescription('Le mur est lisse et préparé.Protection des surfaces, ponçage ou lessivage des murs. Inclut une sous couche et si nécessaire deux couches de peinture.');
         $work->setDuration(0,2);
         $work->setNumberofPeoplemin(1);
-		
+
         $this->addReference('work-1', $work);		
         $manager->persist($work);
-		
-		$work = new Work();	
-		$work->setId(1);		
+
+        $work = new Work();	
+        $work->setId(1);		
         $work->setReference('Peinture + préparation du support');
         $work->setDescription('Support partiellement dégradé. Rebouchage et mastiquage des irrégularités. Passage d\'un enduit de lissage. Protection des surfaces, ponçage ou lessivage des murs. Inclut une sous couche et si nécessaire deux couches de peinture.');
         $work->setDuration(0,4);
         $work->setNumberofPeoplemin(1);
-		
+
         $this->addReference('work-2', $work);		
         $manager->persist($work);
 

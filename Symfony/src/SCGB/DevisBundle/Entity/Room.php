@@ -31,29 +31,29 @@ class Room
      * @ORM\Id()
      */
     protected $id;
-	
-	/**
+
+    /**
      * @ORM\ManyToOne(targetEntity="SCGB\DevisBundle\Entity\Devis", inversedBy="rooms", cascade={"persist"})
      * @ORM\JoinColumn(name="devis_id", referencedColumnName="id")
      */
-    private $devis;	
-	
-	/**
+    private $devis;
+
+    /**
      * @ORM\OneToMany(targetEntity="SCGB\DevisBundle\Entity\RoomWork", mappedBy="room", cascade={"persist", "remove"})
      */
     protected $roomWorks;
-	
-	/**
+
+    /**
      * @ORM\Column(name="category", type="string", length=150, nullable=true)
      */
     private $category;
-	
-	/**
+
+    /**
      * @ORM\Column(name="totalWorkAmount", type="decimal", scale=2, nullable=true)
      */
     private $totalWorkAmount;
-	
-	/**
+
+    /**
      * @ORM\Column(name="name", type="string", length=150, nullable=true)
      */
     private $name;
@@ -63,8 +63,8 @@ class Room
      */
     private $size;
 
-	/**
-     * @ORM\Column(name="totalTime", type="decimal", scale=2, nullable=true)
+    /**
+     * @ORM\Column(name="width", type="decimal", scale=2, nullable=true)
      */
     private $width;
 
@@ -94,7 +94,7 @@ class Room
     * Contructor
     */
     public function __construct()
-    {		
+    {
         $this->roomWorks = new ArrayCollection();
     }
 
@@ -125,8 +125,8 @@ class Room
 
         $this->updatedAt = new \DateTime();
     }
-	
-	/**
+
+    /**
      * Add roomWorks
      *
      * @param \SCGB\DevisBundle\Entity\RoomWork $roomWork
@@ -160,8 +160,8 @@ class Room
     {
         return $this->roomWorks;
     }
-	
-	/**
+
+    /**
      * Set name
      *
      * @param string $name
@@ -184,8 +184,8 @@ class Room
     {
         return $this->name;
     }
-	
-	/**
+
+    /**
      * Set category
      *
      * @param string $category
@@ -209,7 +209,7 @@ class Room
         return $this->category;
     }
 
-	/**
+    /**
      * Set devis
      *
      * @param \SCGB\DevisBundle\Entity\Devis $devis
@@ -232,8 +232,8 @@ class Room
     {
         return $this->devis;
     }
-	
-	 /**
+
+     /**
      * Set totalWorkAmount
      *
      * @param float $totalWorkAmount
@@ -256,7 +256,7 @@ class Room
     {
         return $this->totalWorkAmount;
     }
-	
+
      /**
      * Set size
      *
@@ -379,7 +379,7 @@ class Room
     * @return boolean
     */
     public function isDeletable()
-    {       
+    {
 
         return true;
     }

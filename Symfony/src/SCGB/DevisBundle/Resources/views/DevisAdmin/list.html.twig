@@ -3,20 +3,24 @@
 {% block title %}Mon devis en ligne{% endblock %}
 {% set language = 'fr' %}
 
-
 {% block body %}
+{% set send = 1 %}
+{% set new = 1 %}
+{% set save = 1 %}
+{% include 'SCGBDevisBundle:NavigationAdmin:list.html.twig' %}
+
 <div id="bottom" class="row-fluid ">
 		<div class="space_box white_box">
 			<h1 class="text_blue title text-left " > Mon devis / Identifiant : {{ entity.id }} <span class="pull-right">Coût total : {{ entity.globalAmount }} €</span></h1>
-			
+
 			<div class="form-padding">
-				<legend>Vos différentes pièces <a href="{{ path('devis_update', {'id':entity.id}) }}" class="btn pull-right" id="udapte_room">Modifier mes pièces</a></legend>                    
+				<legend>Vos différentes pièces <a href="{{ path('devis_update', {'id':entity.id}) }}" class="btn pull-right" id="udapte_room">Modifier mes pièces</a></legend>
 				{% if entity.rooms is empty %}
 				<div class="alert alert-block">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<strong>Oups ! </strong> Vous n'avez pas ou plus de pièce associé à votre devis, nous vous invions à en ajouter  : 
+					<strong>Oups ! </strong> Vous n'avez pas ou plus de pièce associé à votre devis, nous vous invions à en ajouter  :
 					<a href="{{ path('devis_update', {'id':entity.id}) }}" class="btn btn-primary" style="margin-left:10px;" id="add_room">Ajouter des pièces</a>
-					
+
 				</div>
 				{% else %}
 				<div class="result spacer">
